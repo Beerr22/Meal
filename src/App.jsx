@@ -17,10 +17,13 @@ const SHOPPING_LIST = [
     "Albacore tuna, 3 × 5oz cans","Wild salmon, 2 × 5oz cans","Kalamata olives, 1 × 100g jar",
   ]},
   { cat:"🥩 Meat & Poultry", items:[
-    "Chicken breast, ~2.2 lbs / 7 pieces · 5oz every day","Tilapia fillet, 6oz (Sat lunch)","Tofu, 6 × 14oz packs firm",
+    "Chicken breast, ~2.2 lbs / 7 pieces · 5oz every day",
   ]},
   { cat:"🐟 Fish", items:[
-    "Salmon fillet, 24oz total (4 × 6oz — Tue × 2 + Sat × 2)","Cod fillet, 12oz total (7oz husband + 5oz wife · Fri)",
+    "Salmon fillet, 24oz total (4 × 6oz — Tue × 2 + Sat × 2)","Cod fillet, 12oz total (7oz husband + 5oz wife · Fri)","Tilapia fillet, 6oz (Sat lunch · wife)",
+  ]},
+  { cat:"🌿 Plant Protein", items:[
+    "Tofu, 6 × 14oz packs firm",
   ]},
   { cat:"🥛 Dairy & Eggs", items:[
     "Liquid egg whites, 2 cartons (500ml each)","Unsweetened almond milk, 80 fl oz","Cottage cheese, ~4 lbs","Pistachios, 150g","Chobani 20G Cherry Berry, 5 containers","Reduced-fat feta, small amount",
@@ -105,30 +108,8 @@ const DAYS = [
   },
   {
     day:"THU", full:"Thursday", isWeekend:false, color:"#fb923c",
-    dinner:{ type:"tofu", label:"Cajun-Spiced", sauce:"1 tsp smoked paprika · ¼ tsp cayenne · ½ tsp dried oregano · ½ tsp dried thyme · ½ tsp garlic powder · ½ tsp onion powder" },
-    heartNote:"Third tofu night — 203mg total. Cajun capsaicin has mild lipid-lowering properties.",
-    meals:{
-      breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
-      lunch:{
-        H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
-        W:{ salad:true, eggDay:true, detail:"🥚 EGG DAY — 100g mixed greens · 1 boiled egg · ½ avocado · 60g cherry tomatoes · small amount reduced-fat feta", cal:340, pro:10, fat:22, chol:200 },
-      },
-      snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
-        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios + Chobani 20G Cherry Berry", cal:664, pro:70, fat:19, chol:80 },
-      },
-      dinner:{
-        prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · generous Cajun rub",
-        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:530, pro:38, fat:29, chol:0 },
-        W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
-      },
-    },
-    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1989, pro:144, fat:100, chol:295 } },
-  },
-  {
-    day:"FRI", full:"Friday", isWeekend:false, color:"#f472b6",
     dinner:{ type:"cod", label:"Lemon-Caper", sauce:"Lemon juice & zest · capers · garlic · fresh parsley · 1.5 tbsp avocado oil" },
-    heartNote:"Cod + Animal Whey = tighter day. Chicken trimmed at lunch — 209mg total, safely under cap.",
+    heartNote:"Cod night — switched from Friday. 5oz chicken + cod + Animal Whey = 302mg chol. Strong protein at 240g.",
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
@@ -145,7 +126,29 @@ const DAYS = [
         W:{ detail:"5oz cod fillet + 150g cruciferous medley + ½ avocado", cal:565, pro:31, fat:41, chol:71 },
       },
     },
-    totals:{ H:{ cal:2333, pro:240, fat:80, chol:302 }, W:{ cal:1914, pro:139, fat:108, chol:226 } },
+    totals:{ H:{ cal:2333, pro:240, fat:80, chol:302 }, W:{ cal:1989, pro:144, fat:100, chol:295 } },
+  },
+  {
+    day:"FRI", full:"Friday", isWeekend:false, color:"#f472b6",
+    dinner:{ type:"tofu", label:"Cajun-Spiced", sauce:"1 tsp smoked paprika · ¼ tsp cayenne · ½ tsp dried oregano · ½ tsp dried thyme · ½ tsp garlic powder · ½ tsp onion powder" },
+    heartNote:"Tofu night — switched from Thursday. 0mg chol at dinner. 203mg total — well under cap.",
+    meals:{
+      breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
+      lunch:{
+        H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
+        W:{ salad:true, eggDay:true, detail:"🥚 EGG DAY — 100g mixed greens · 1 boiled egg · ½ avocado · 60g cherry tomatoes · small amount reduced-fat feta", cal:340, pro:10, fat:22, chol:200 },
+      },
+      snacks:{
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
+        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios + Chobani 20G Cherry Berry", cal:664, pro:70, fat:19, chol:80 },
+      },
+      dinner:{
+        prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · generous Cajun rub",
+        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:530, pro:38, fat:29, chol:0 },
+        W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
+      },
+    },
+    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1914, pro:139, fat:108, chol:226 } },
   },
   {
     day:"SAT", full:"Saturday", isWeekend:true, color:"#f97316",
@@ -515,7 +518,7 @@ export default function MealPlan() {
   const activeDay = DAYS.find(d=>d.day===tab);
   const tabs = [
     {id:"prep", isPrep:true, color:"#fbbf24"},
-    ...DAYS.map(d=>({id:d.day, isPrep:false, day:d.day, cal:d.totals.H.cal, pro:d.totals.H.pro, chol:d.totals.H.chol, color:d.color, dinnerEmoji:DT[d.dinner.type].emoji, dinnerLabel:d.dinner.label, dinnerColor:DT[d.dinner.type].color}))
+    ...DAYS.map(d=>({id:d.day, isPrep:false, day:d.day, cal:d.totals.H.cal, pro:d.totals.H.pro, chol:d.totals.H.chol, color:d.color, dinnerEmoji:DT[d.dinner.type].emoji, dinnerLabel:d.dinner.label, dinnerType:DT[d.dinner.type].label, dinnerColor:DT[d.dinner.type].color}))
   ];
 
   return (
@@ -523,14 +526,10 @@ export default function MealPlan() {
       <div style={{background:"linear-gradient(180deg,#0b1628,#060d18)",padding:"20px 18px 0",borderBottom:"1px solid rgba(255,255,255,0.05)"}}>
         <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",marginBottom:14}}>
           <div>
-            <h1 style={{margin:"0 0 3px",fontSize:21,fontWeight:900,letterSpacing:-.5}}>🥘 Couples Meal Plan</h1>
+            <h1 style={{margin:"0 0 3px",fontSize:21,fontWeight:900,letterSpacing:-.5}}>❤️ Kolano's Meal Plan</h1>
             
           </div>
-          <div style={{display:"flex",flexWrap:"wrap",gap:4,justifyContent:"flex-end"}}>
-            {Object.entries(DT).map(([k,v])=>(
-              <span key={k} style={{display:"flex",alignItems:"center",gap:3,background:v.bg,border:`1px solid ${v.color}33`,padding:"3px 7px",borderRadius:20,fontSize:9,fontWeight:800,color:v.color}}>{v.emoji} {v.label}</span>
-            ))}
-          </div>
+
         </div>
 
         {/* Profile cards — shared grid rows */}
@@ -576,19 +575,15 @@ export default function MealPlan() {
               <>
                 <span style={{fontSize:10,fontWeight:900,color:"#fff",lineHeight:1.3,height:14,display:"flex",alignItems:"center"}}>PREP</span>
                 <span style={{fontSize:12,lineHeight:1.2,height:18,display:"flex",alignItems:"center"}}>☀️</span>
-                <span style={{fontSize:8,fontWeight:800,height:12,display:"flex",alignItems:"center"}}></span>
-                <span style={{fontSize:9,fontWeight:700,height:12,display:"flex",alignItems:"center"}}></span>
-                <span style={{fontSize:9,fontWeight:600,height:12,display:"flex",alignItems:"center"}}></span>
-                <span style={{fontSize:9,fontWeight:900,height:12,display:"flex",alignItems:"center"}}></span>
+                <span style={{fontSize:8,fontWeight:900,height:12,display:"flex",alignItems:"center"}}></span>
+                <span style={{fontSize:8,fontWeight:800,height:24,display:"flex",alignItems:"flex-start"}}></span>
               </>
             ):(
               <>
                 <span style={{fontSize:10,fontWeight:900,color:"#fff",lineHeight:1.3,height:14,display:"flex",alignItems:"center"}}>{t.day}</span>
                 <span style={{fontSize:12,lineHeight:1.2,height:18,display:"flex",alignItems:"center"}}>{t.dinnerEmoji}</span>
-                <span style={{fontSize:7,fontWeight:800,color:tab===t.id?"rgba(255,255,255,0.8)":t.dinnerColor,textTransform:"uppercase",textAlign:"center",lineHeight:1.2,height:24,display:"flex",alignItems:"flex-start",justifyContent:"center",width:"100%",wordBreak:"break-word"}}>{t.dinnerLabel}</span>
-                <span style={{fontSize:9,fontWeight:700,color:tab===t.id?"rgba(255,255,255,.9)":"#86efac",lineHeight:1.3,height:12,display:"flex",alignItems:"center"}}>{t.cal}</span>
-                <span style={{fontSize:9,fontWeight:600,color:tab===t.id?"rgba(255,255,255,.8)":"#93c5fd",lineHeight:1.3,height:12,display:"flex",alignItems:"center"}}>{t.pro}g P</span>
-                <span style={{fontSize:9,fontWeight:900,color:tab===t.id?"rgba(255,255,255,.95)":cholColor(t.chol),lineHeight:1.3,height:12,display:"flex",alignItems:"center"}}>{t.chol}mg</span>
+                <span style={{fontSize:8,fontWeight:900,color:tab===t.id?"rgba(255,255,255,0.9)":t.dinnerColor,textTransform:"uppercase",lineHeight:1.2,height:12,display:"flex",alignItems:"center"}}>{t.dinnerType}</span>
+                <span style={{fontSize:7,fontWeight:800,color:tab===t.id?"rgba(255,255,255,0.7)":t.dinnerColor+"99",textTransform:"uppercase",textAlign:"center",lineHeight:1.2,height:24,display:"flex",alignItems:"flex-start",justifyContent:"center",width:"100%",wordBreak:"break-word"}}>{t.dinnerLabel}</span>
               </>
             )}
           </button>
