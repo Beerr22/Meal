@@ -45,7 +45,7 @@ const DAYS = [
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
         H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
-        W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) albacore tuna · ½ avocado · 1 tbsp avocado oil & lemon", cal:490, pro:38, fat:26, chol:55 },
+        W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) albacore tuna · ½ avocado", cal:490, pro:38, fat:26, chol:55 },
       },
       snacks:{
         H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
@@ -61,13 +61,13 @@ const DAYS = [
   },
   {
     day:"TUE", full:"Tuesday", isWeekend:false, color:"#2eefb0",
-    dinner:{ type:"salmon", label:"Lemon-Dill", sauce:"Lemon zest · fresh dill · garlic · 1 tbsp avocado oil · sea salt · cracked black pepper" },
+    dinner:{ type:"salmon", label:"Lemon-Dill", sauce:"Lemon zest · fresh dill · garlic · sea salt · cracked black pepper" },
     heartNote:"Salmon + Animal Whey = tighter chol day. Chicken trimmed at lunch — lands at 217mg safely under cap.",
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
         H:{ base:true, detail:"150g ratatouille base + 3.5oz chicken breast", cal:244, pro:35, fat:7, chol:77 },
-        W:{ salad:true, eggDay:true, detail:"🥚 EGG DAY — 100g mixed greens · 2 boiled eggs · ½ avocado · 70g cherry tomatoes · 1 tbsp avocado oil", cal:450, pro:12, fat:35, chol:374 },
+        W:{ salad:true, eggDay:true, detail:"🥚 EGG DAY — 100g mixed greens · 2 boiled eggs · ½ avocado · 70g cherry tomatoes", cal:450, pro:12, fat:35, chol:374 },
       },
       snacks:{
         H:{ detail:"200g cottage cheese + 1 scoop GoL + 55g almonds + 40g hazelnuts", cal:873, pro:60, fat:48, chol:18 },
@@ -83,13 +83,13 @@ const DAYS = [
   },
   {
     day:"WED", full:"Wednesday", isWeekend:false, color:"#c4a8ff",
-    dinner:{ type:"tofu", label:"Smoked Paprika & Lemon", sauce:"1 tsp smoked paprika · zest + 1 tbsp juice of 1 lemon · ½ tsp garlic powder · 1 tbsp avocado oil · 2 tbsp fresh parsley chopped · sea salt" },
+    dinner:{ type:"tofu", label:"Smoked Paprika & Lemon", sauce:"1 tsp smoked paprika · zest + 1 tbsp juice of 1 lemon · ½ tsp garlic powder · 2 tbsp fresh parsley chopped · sea salt" },
     heartNote:"Back to tofu — 0mg chol at dinner. Animal Whey adds 60mg at snack, total stays at 203mg.",
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
         H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
-        W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 60g red pepper · 1 can (5oz) wild salmon · ½ avocado · 1 tbsp avocado oil", cal:500, pro:35, fat:30, chol:65 },
+        W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 60g red pepper · 1 can (5oz) wild salmon · ½ avocado", cal:500, pro:35, fat:30, chol:65 },
       },
       snacks:{
         H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
@@ -105,7 +105,7 @@ const DAYS = [
   },
   {
     day:"THU", full:"Thursday", isWeekend:false, color:"#fb923c",
-    dinner:{ type:"tofu", label:"Cajun-Spiced", sauce:"1 tsp smoked paprika · ¼ tsp cayenne · ½ tsp dried oregano · ½ tsp dried thyme · ½ tsp garlic powder · ½ tsp onion powder · 1 tbsp avocado oil" },
+    dinner:{ type:"tofu", label:"Cajun-Spiced", sauce:"1 tsp smoked paprika · ¼ tsp cayenne · ½ tsp dried oregano · ½ tsp dried thyme · ½ tsp garlic powder · ½ tsp onion powder" },
     heartNote:"Third tofu night — 203mg total. Cajun capsaicin has mild lipid-lowering properties.",
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
@@ -133,7 +133,7 @@ const DAYS = [
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
         H:{ base:true, detail:"150g ratatouille base + 3.5oz chicken breast", cal:244, pro:35, fat:7, chol:77 },
-        W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) wild salmon · ½ avocado · 1 tbsp avocado oil", cal:510, pro:32, fat:34, chol:75 },
+        W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) wild salmon · ½ avocado", cal:510, pro:32, fat:34, chol:75 },
       },
       snacks:{
         H:{ detail:"200g cottage cheese + 1 scoop GoL + 65g almonds + 40g hazelnuts", cal:931, pro:62, fat:51, chol:18 },
@@ -149,7 +149,7 @@ const DAYS = [
   },
   {
     day:"SAT", full:"Saturday", isWeekend:true, color:"#f97316",
-    dinner:{ type:"salmon", label:"Garlic-Herb", sauce:"Garlic · fresh parsley & thyme · lemon zest · 1 tbsp avocado oil · sea salt" },
+    dinner:{ type:"salmon", label:"Garlic-Herb", sauce:"Garlic · fresh parsley & thyme · lemon zest · sea salt" },
     heartNote:"Shared egg white omelette. GoL shake at snack. 5oz chicken at lunch. 222g protein · 211mg chol ✅",
     meals:{
       breakfast:{
