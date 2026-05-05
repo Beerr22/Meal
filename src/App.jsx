@@ -17,7 +17,7 @@ const SHOPPING_LIST = [
     "Albacore tuna, 3 × 5oz cans","Wild salmon, 2 × 5oz cans","Kalamata olives, 1 × 100g jar",
   ]},
   { cat:"🥩 Meat & Poultry", items:[
-    "Chicken breast, 2.5 lbs / 8 pieces","Tilapia fillet, 6oz (Sat lunch)","Tofu, 6 × 14oz packs firm",
+    "Chicken breast, ~2 lbs (5oz Mon/Wed/Thu/Sat/Sun · 3.5oz Tue/Fri)","Tilapia fillet, 6oz (Sat lunch)","Tofu, 6 × 14oz packs firm",
   ]},
   { cat:"🐟 Fish", items:[
     "Salmon fillet, 24oz total (4 × 6oz — Tue × 2 + Sat × 2)","Cod fillet, 12oz total (7oz husband + 5oz wife · Fri)",
@@ -66,7 +66,7 @@ const DAYS = [
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
-        H:{ base:true, detail:"150g ratatouille base + 3.5oz chicken breast", cal:244, pro:35, fat:7, chol:77 },
+        H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
         W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) albacore tuna · ½ avocado", cal:370, pro:32, fat:16, chol:55 },
       },
       snacks:{
@@ -317,7 +317,7 @@ export default function MealPlan() {
       sunday: [
         { key:"ratatouille", icon:"🫕", title:"Slow Cooker: Ratatouille", time:"15 min", desc:"Start first thing — 7–8 hrs LOW. Husband's weekday lunches Mon–Fri.", tag:"LUNCH BASE — HUSBAND MON–FRI", tagColor:"#f87171", tagBg:"rgba(248,113,113,0.1)", base:BASES.find(b=>b.key==="ratatouille") },
         { key:"cruciferous", icon:"✈️", title:"Prep Cruciferous Vegetables", time:"20 min", desc:"Wash, cut into florets, store raw in fridge. Air-fry 150g fresh before each Mon–Fri dinner.", tag:"DINNER BASE — BOTH · MON–FRI", tagColor:"#4ade80", tagBg:"rgba(74,222,128,0.1)", base:BASES.find(b=>b.key==="cruciferous") },
-        { key:"chicken", icon:"🍗", title:"Batch Chicken Breast (~1.5 lbs)", time:"20 min", desc:"Lemon, garlic, salt · Air Fryer 400°F · 15 min · slice & refrigerate. Mon–Fri lunches + Sat/Sun lunch.", tag:"BATCH PROTEIN — HUSBAND", tagColor:"#38bdf8", tagBg:"rgba(56,189,248,0.1)", base:null, ingredients:["~1.5 lbs chicken breast","1 lemon, juiced","3 garlic cloves, minced","Salt and black pepper"], steps:["Season chicken with lemon juice, garlic, salt and pepper.","Air Fryer 400°F · 15 min · flip halfway.","Rest 5 min. Slice and store in a sealed container."], storage:"Fridge 5 days" },
+        { key:"chicken", icon:"🍗", title:"Batch Chicken Breast (~2 lbs)", time:"20 min", desc:"Lemon, garlic, salt · Air Fryer 400°F · 15 min · slice & refrigerate. All 7 lunches — 5oz Mon/Wed/Thu/Sat/Sun · 3.5oz Tue/Fri.", tag:"BATCH PROTEIN — HUSBAND", tagColor:"#38bdf8", tagBg:"rgba(56,189,248,0.1)", base:null, ingredients:["~2 lbs chicken breast","1 lemon, juiced","3 garlic cloves, minced","Salt and black pepper"], steps:["Season chicken with lemon juice, garlic, salt and pepper.","Air Fryer 400°F · 15 min · flip halfway.","Rest 5 min. Slice and store in a sealed container."], storage:"Fridge 5 days" },
         { key:"salad", icon:"🥗", title:"Wife's Salad Base", time:"10 min", desc:"5 grab-and-go portions. Hard-boil eggs for Tue & Thu.", tag:"WIFE'S LUNCHES — MON–FRI", tagColor:"#fb923c", tagBg:"rgba(251,146,60,0.1)", base:null, ingredients:["500g mixed greens","3 medium cucumbers, sliced","3 bell peppers, diced","1 red onion, thinly sliced","Eggs (hard-boil for Tue & Thu)"], steps:["Chop all vegetables.","Divide into 5 equal containers.","Hard-boil eggs for Tue & Thu.","Add tuna, salmon or avocado fresh each day."], storage:"Fridge 5 days · Add protein + avocado fresh daily" },
       ],
       saturday: [
