@@ -142,7 +142,7 @@ const DAYS = [
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
         H:{ detail:"7oz cod fillet + 150g cruciferous medley + ½ avocado", cal:475, pro:50, fat:17, chol:99 },
-        W:{ detail:"5oz cod fillet + 150g cruciferous medley + ½ avocado + 2 tbsp avocado oil", cal:565, pro:31, fat:41, chol:71 },
+        W:{ detail:"5oz cod fillet + 150g cruciferous medley + ½ avocado", cal:565, pro:31, fat:41, chol:71 },
       },
     },
     totals:{ H:{ cal:2385, pro:232, fat:82, chol:209 }, W:{ cal:1914, pro:139, fat:108, chol:211 } },
@@ -155,7 +155,7 @@ const DAYS = [
       breakfast:{
         name:"Shared Egg White Omelette · Mushrooms · Spinach · Avocado",
         prep:"Stovetop · 15 min · make one large omelette together and split it",
-        base:"150g mushrooms · 100g baby spinach · 100g cherry tomatoes · avocado oil spray · sea salt · black pepper",
+        base:"150g mushrooms · 100g baby spinach · 100g cherry tomatoes · · sea salt · black pepper",
         H:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1½ cups liquid egg whites + ½ avocado\n3 scoops GoL + 8 fl oz almond milk", cal:690, pro:86, fat:20, chol:0 },
         W:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1 cup liquid egg whites + ½ avocado", cal:240, pro:18, fat:16, chol:0 },
       },
@@ -183,7 +183,7 @@ const DAYS = [
       breakfast:{
         name:"Shared Egg White Omelette · Peppers · Zucchini · Mushrooms · Avocado",
         prep:"Stovetop · 15 min · make one large omelette together and split it",
-        base:"100g zucchini · 80g mixed peppers · 80g onion · 80g mushrooms · avocado oil spray · everything bagel seasoning",
+        base:"100g zucchini · 80g mixed peppers · 80g onion · 80g mushrooms · · everything bagel seasoning",
         H:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1½ cups liquid egg whites + ½ avocado\n3 scoops GoL + 8 fl oz almond milk", cal:690, pro:86, fat:20, chol:0 },
         W:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1 cup liquid egg whites + ½ avocado", cal:240, pro:18, fat:16, chol:0 },
       },
