@@ -52,7 +52,7 @@ const DAYS = [
       },
       snacks:{
         H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
-        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:514, pro:50, fat:17, chol:65 },
+        W:{ detail:"1 scoop Animal Whey (chocolate) + 25g pistachios", cal:265, pro:26, fat:8, chol:60 },
       },
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · flip halfway · brush sauce last 5 min",
@@ -60,7 +60,7 @@ const DAYS = [
         W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
       },
     },
-    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1989, pro:152, fat:102, chol:135 } },
+    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1800, pro:128, fat:83, chol:130 } },
   },
   {
     day:"TUE", full:"Tuesday", isWeekend:false, color:"#2eefb0",
@@ -74,7 +74,7 @@ const DAYS = [
       },
       snacks:{
         H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
-        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:514, pro:50, fat:17, chol:65 },
+        W:{ detail:"130g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:456, pro:42, fat:15, chol:61 },
       },
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
@@ -82,7 +82,7 @@ const DAYS = [
         W:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:649, pro:40, fat:47, chol:107 },
       },
     },
-    totals:{ H:{ cal:2407, pro:230, fat:90, chol:310 }, W:{ cal:1858, pro:148, fat:79, chol:242 } },
+    totals:{ H:{ cal:2407, pro:230, fat:90, chol:310 }, W:{ cal:1800, pro:140, fat:77, chol:238 } },
   },
   {
     day:"WED", full:"Wednesday", isWeekend:false, color:"#c4a8ff",
@@ -96,7 +96,7 @@ const DAYS = [
       },
       snacks:{
         H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
-        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:514, pro:50, fat:17, chol:65 },
+        W:{ detail:"1 scoop Animal Whey (chocolate) + 23g pistachios", cal:254, pro:26, fat:7, chol:60 },
       },
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · paprika-lemon rub",
@@ -104,7 +104,7 @@ const DAYS = [
         W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
       },
     },
-    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1999, pro:149, fat:106, chol:145 } },
+    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1799, pro:125, fat:85, chol:140 } },
   },
   {
     day:"THU", full:"Thursday", isWeekend:false, color:"#fb923c",
@@ -118,7 +118,7 @@ const DAYS = [
       },
       snacks:{
         H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
-        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:514, pro:50, fat:17, chol:65 },
+        W:{ detail:"55g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:398, pro:34, fat:12, chol:61 },
       },
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
@@ -126,7 +126,7 @@ const DAYS = [
         W:{ detail:"5oz cod fillet + 150g cruciferous medley + ½ avocado", cal:565, pro:31, fat:41, chol:71 },
       },
     },
-    totals:{ H:{ cal:2333, pro:240, fat:80, chol:302 }, W:{ cal:1989, pro:144, fat:100, chol:295 } },
+    totals:{ H:{ cal:2333, pro:240, fat:80, chol:302 }, W:{ cal:1799, pro:114, fat:80, chol:272 } },
   },
   {
     day:"FRI", full:"Friday", isWeekend:false, color:"#f472b6",
@@ -140,7 +140,7 @@ const DAYS = [
       },
       snacks:{
         H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
-        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios + Chobani 20G Cherry Berry", cal:664, pro:70, fat:19, chol:80 },
+        W:{ detail:"150g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:474, pro:40, fat:15, chol:62 },
       },
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · generous Cajun rub",
@@ -148,7 +148,7 @@ const DAYS = [
         W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
       },
     },
-    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1914, pro:139, fat:108, chol:226 } },
+    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1798, pro:123, fat:103, chol:222 } },
   },
   {
     day:"SAT", full:"Saturday", isWeekend:true, color:"#f97316",
@@ -168,7 +168,7 @@ const DAYS = [
       },
       snacks:{
         H:{ detail:"200g cottage cheese + 1 scoop GoL + 20g almonds + 60g hazelnuts", cal:807, pro:56, fat:71, chol:18 },
-        W:{ detail:"200g cottage cheese + 1 scoop GoL + 8 fl oz almond milk + 30g almonds", cal:484, pro:50, fat:12, chol:9 },
+        W:{ detail:"170g cottage cheese + 1 scoop GoL + 8 fl oz almond milk + 30g almonds", cal:460, pro:47, fat:11, chol:8 },
       },
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED · Mediterranean base prepared Saturday morning",
@@ -176,7 +176,7 @@ const DAYS = [
         W:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:649, pro:35, fat:45, chol:89 },
       },
     },
-    totals:{ H:{ cal:2393, pro:222, fat:111, chol:211 }, W:{ cal:1823, pro:141, fat:104, chol:183 } },
+    totals:{ H:{ cal:2393, pro:222, fat:111, chol:211 }, W:{ cal:1799, pro:138, fat:103, chol:182 } },
   },
   {
     day:"SUN", full:"Sunday", isWeekend:true, color:"#e05555",
