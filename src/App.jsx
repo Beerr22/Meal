@@ -56,7 +56,7 @@ const DAYS = [
       },
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · flip halfway · brush sauce last 5 min",
-        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:530, pro:38, fat:29, chol:0 },
+        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:810, pro:63, fat:54, chol:0 },
         W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
       },
     },
@@ -78,8 +78,8 @@ const DAYS = [
       },
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
-        H:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:549, pro:40, fat:35, chol:107 },
-        W:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:649, pro:40, fat:47, chol:107 },
+        H:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:580, pro:43, fat:37, chol:108 },
+        W:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:580, pro:43, fat:37, chol:108 },
       },
     },
     totals:{ H:{ cal:2407, pro:230, fat:90, chol:310 }, W:{ cal:1800, pro:140, fat:77, chol:238 } },
@@ -100,7 +100,7 @@ const DAYS = [
       },
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · paprika-lemon rub",
-        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:530, pro:38, fat:29, chol:0 },
+        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:810, pro:63, fat:54, chol:0 },
         W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
       },
     },
@@ -122,8 +122,8 @@ const DAYS = [
       },
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
-        H:{ detail:"7oz cod fillet + 150g cruciferous medley + ½ avocado", cal:475, pro:50, fat:17, chol:99 },
-        W:{ detail:"5oz cod fillet + 150g cruciferous medley + ½ avocado", cal:565, pro:31, fat:41, chol:71 },
+        H:{ detail:"7oz cod fillet + 150g cruciferous medley + ½ avocado", cal:495, pro:49, fat:22, chol:98 },
+        W:{ detail:"5oz cod fillet + 150g cruciferous medley + ½ avocado", cal:425, pro:37, fat:21, chol:70 },
       },
     },
     totals:{ H:{ cal:2333, pro:240, fat:80, chol:302 }, W:{ cal:1799, pro:114, fat:80, chol:272 } },
@@ -144,7 +144,7 @@ const DAYS = [
       },
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · generous Cajun rub",
-        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:530, pro:38, fat:29, chol:0 },
+        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:810, pro:63, fat:54, chol:0 },
         W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
       },
     },
@@ -172,8 +172,8 @@ const DAYS = [
       },
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED · Mediterranean base prepared Saturday morning",
-        H:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:549, pro:35, fat:33, chol:107 },
-        W:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:649, pro:35, fat:45, chol:89 },
+        H:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:590, pro:40, fat:38, chol:108 },
+        W:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:590, pro:40, fat:38, chol:108 },
       },
     },
     totals:{ H:{ cal:2393, pro:222, fat:111, chol:211 }, W:{ cal:1799, pro:138, fat:103, chol:182 } },
@@ -200,8 +200,8 @@ const DAYS = [
       },
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · brush miso glaze last 5 min",
-        H:{ detail:"14oz firm tofu (full pack) + 150g Mediterranean veg base + ½ avocado", cal:508, pro:32, fat:29, chol:0 },
-        W:{ detail:"14oz firm tofu (full pack) + 150g Mediterranean veg base + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
+        H:{ detail:"14oz firm tofu (full pack) + 150g Mediterranean veg base + ½ avocado", cal:820, pro:60, fat:55, chol:0 },
+        W:{ detail:"7oz firm tofu (½ pack) + 150g Mediterranean veg base + ½ avocado", cal:540, pro:32, fat:38, chol:0 },
       },
     },
     totals:{ H:{ cal:2376, pro:221, fat:110, chol:104 }, W:{ cal:1734, pro:132, fat:89, chol:9 } },
@@ -552,7 +552,10 @@ export default function MealPlan() {
           {[HP,WP].map(p=>(
             <div key={p.name+"targets"} style={{background:p.bg,border:`1px solid ${p.border}`,borderTop:"none",borderRadius:"0 0 12px 12px",padding:"0 14px 14px"}}>
               <div style={{background:"rgba(0,0,0,.4)",borderRadius:7,padding:"5px 10px",fontSize:9,color:p.color,fontWeight:800}}>
-                {p.targets.cal} kcal · {p.targets.pro}g P · {`<${p.targets.chol}mg chol`}
+              {p.name === HP.name
+                ? `${Math.round(DAYS.reduce((s,d)=>s+d.totals.H.cal,0)/7)} kcal avg · ${Math.round(DAYS.reduce((s,d)=>s+d.totals.H.pro,0)/7)}g P avg · ${Math.round(DAYS.reduce((s,d)=>s+d.totals.H.chol,0)/7)}mg chol avg`
+                : `${Math.round(DAYS.reduce((s,d)=>s+d.totals.W.cal,0)/7)} kcal avg · ${Math.round(DAYS.reduce((s,d)=>s+d.totals.W.pro,0)/7)}g P avg · ${Math.round(DAYS.reduce((s,d)=>s+d.totals.W.chol,0)/7)}mg chol avg`
+              }
               </div>
             </div>
           ))}
