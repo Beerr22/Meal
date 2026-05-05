@@ -67,7 +67,7 @@ const DAYS = [
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
         H:{ base:true, detail:"150g ratatouille base + 3.5oz chicken breast", cal:244, pro:35, fat:7, chol:77 },
-        W:{ salad:true, eggDay:true, detail:"🥚 EGG DAY — 100g mixed greens · 2 boiled eggs · ½ avocado · 70g cherry tomatoes", cal:450, pro:12, fat:35, chol:374 },
+        W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) albacore tuna · ½ avocado", cal:370, pro:32, fat:16, chol:55 },
       },
       snacks:{
         H:{ detail:"200g cottage cheese + 1 scoop GoL + 55g almonds + 40g hazelnuts", cal:873, pro:60, fat:48, chol:18 },
@@ -79,7 +79,7 @@ const DAYS = [
         W:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:649, pro:40, fat:47, chol:107 },
       },
     },
-    totals:{ H:{ cal:2401, pro:220, fat:90, chol:217 }, W:{ cal:1838, pro:128, fat:115, chol:242 } },
+    totals:{ H:{ cal:2401, pro:220, fat:90, chol:217 }, W:{ cal:1858, pro:148, fat:79, chol:242 } },
   },
   {
     day:"WED", full:"Wednesday", isWeekend:false, color:"#c4a8ff",
@@ -101,7 +101,7 @@ const DAYS = [
         W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
       },
     },
-    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1999, pro:139, fat:105, chol:145 } },
+    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1999, pro:149, fat:106, chol:145 } },
   },
   {
     day:"THU", full:"Thursday", isWeekend:false, color:"#fb923c",
@@ -145,7 +145,7 @@ const DAYS = [
         W:{ detail:"5oz cod fillet + 150g cruciferous medley + ½ avocado", cal:565, pro:31, fat:41, chol:71 },
       },
     },
-    totals:{ H:{ cal:2385, pro:232, fat:82, chol:209 }, W:{ cal:1914, pro:139, fat:108, chol:211 } },
+    totals:{ H:{ cal:2385, pro:232, fat:82, chol:209 }, W:{ cal:1914, pro:139, fat:108, chol:226 } },
   },
   {
     day:"SAT", full:"Saturday", isWeekend:true, color:"#f97316",
