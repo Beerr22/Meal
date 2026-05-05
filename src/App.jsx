@@ -17,7 +17,7 @@ const SHOPPING_LIST = [
     "Albacore tuna, 3 × 5oz cans","Wild salmon, 2 × 5oz cans","Kalamata olives, 1 × 100g jar",
   ]},
   { cat:"🥩 Meat & Poultry", items:[
-    "Chicken breast, ~2 lbs (5oz Mon/Wed/Thu/Sat/Sun · 3.5oz Tue/Fri)","Tilapia fillet, 6oz (Sat lunch)","Tofu, 6 × 14oz packs firm",
+    "Chicken breast, ~2.2 lbs / 7 pieces · 5oz every day","Tilapia fillet, 6oz (Sat lunch)","Tofu, 6 × 14oz packs firm",
   ]},
   { cat:"🐟 Fish", items:[
     "Salmon fillet, 24oz total (4 × 6oz — Tue × 2 + Sat × 2)","Cod fillet, 12oz total (7oz husband + 5oz wife · Fri)",
@@ -70,7 +70,7 @@ const DAYS = [
         W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) albacore tuna · ½ avocado", cal:370, pro:32, fat:16, chol:55 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop GoL + 55g almonds + 40g hazelnuts", cal:873, pro:60, fat:48, chol:18 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
         W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:514, pro:50, fat:17, chol:65 },
       },
       dinner:{
@@ -79,7 +79,7 @@ const DAYS = [
         W:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:649, pro:40, fat:47, chol:107 },
       },
     },
-    totals:{ H:{ cal:2401, pro:220, fat:90, chol:217 }, W:{ cal:1858, pro:148, fat:79, chol:242 } },
+    totals:{ H:{ cal:2407, pro:230, fat:90, chol:310 }, W:{ cal:1858, pro:148, fat:79, chol:242 } },
   },
   {
     day:"WED", full:"Wednesday", isWeekend:false, color:"#c4a8ff",
@@ -110,7 +110,7 @@ const DAYS = [
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
-        H:{ base:true, detail:"150g ratatouille base + 3.5oz chicken breast", cal:244, pro:35, fat:7, chol:77 },
+        H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
         W:{ salad:true, eggDay:true, detail:"🥚 EGG DAY — 100g mixed greens · 1 boiled egg · ½ avocado · 60g cherry tomatoes · small amount reduced-fat feta", cal:340, pro:10, fat:22, chol:200 },
       },
       snacks:{
@@ -132,11 +132,11 @@ const DAYS = [
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
-        H:{ base:true, detail:"150g ratatouille base + 3.5oz chicken breast", cal:244, pro:35, fat:7, chol:77 },
+        H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
         W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) wild salmon · ½ avocado", cal:510, pro:32, fat:34, chol:75 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop GoL + 65g almonds + 40g hazelnuts", cal:931, pro:62, fat:51, chol:18 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
         W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:514, pro:50, fat:17, chol:65 },
       },
       dinner:{
@@ -145,7 +145,7 @@ const DAYS = [
         W:{ detail:"5oz cod fillet + 150g cruciferous medley + ½ avocado", cal:565, pro:31, fat:41, chol:71 },
       },
     },
-    totals:{ H:{ cal:2385, pro:232, fat:82, chol:209 }, W:{ cal:1914, pro:139, fat:108, chol:226 } },
+    totals:{ H:{ cal:2333, pro:240, fat:80, chol:302 }, W:{ cal:1914, pro:139, fat:108, chol:226 } },
   },
   {
     day:"SAT", full:"Saturday", isWeekend:true, color:"#f97316",
@@ -317,7 +317,7 @@ export default function MealPlan() {
       sunday: [
         { key:"ratatouille", icon:"🫕", title:"Slow Cooker: Ratatouille", time:"15 min", desc:"Start first thing — 7–8 hrs LOW. Husband's weekday lunches Mon–Fri.", tag:"LUNCH BASE — HUSBAND MON–FRI", tagColor:"#f87171", tagBg:"rgba(248,113,113,0.1)", base:BASES.find(b=>b.key==="ratatouille") },
         { key:"cruciferous", icon:"✈️", title:"Prep Cruciferous Vegetables", time:"20 min", desc:"Wash, cut into florets, store raw in fridge. Air-fry 150g fresh before each Mon–Fri dinner.", tag:"DINNER BASE — BOTH · MON–FRI", tagColor:"#4ade80", tagBg:"rgba(74,222,128,0.1)", base:BASES.find(b=>b.key==="cruciferous") },
-        { key:"chicken", icon:"🍗", title:"Batch Chicken Breast (~2 lbs)", time:"20 min", desc:"Lemon, garlic, salt · Air Fryer 400°F · 15 min · slice & refrigerate. All 7 lunches — 5oz Mon/Wed/Thu/Sat/Sun · 3.5oz Tue/Fri.", tag:"BATCH PROTEIN — HUSBAND", tagColor:"#38bdf8", tagBg:"rgba(56,189,248,0.1)", base:null, ingredients:["~2 lbs chicken breast","1 lemon, juiced","3 garlic cloves, minced","Salt and black pepper"], steps:["Season chicken with lemon juice, garlic, salt and pepper.","Air Fryer 400°F · 15 min · flip halfway.","Rest 5 min. Slice and store in a sealed container."], storage:"Fridge 5 days" },
+        { key:"chicken", icon:"🍗", title:"Batch Chicken Breast (~2.2 lbs)", time:"20 min", desc:"Lemon, garlic, salt · Air Fryer 400°F · 15 min · slice & refrigerate. 5oz every day, all 7 lunches.", tag:"BATCH PROTEIN — HUSBAND", tagColor:"#38bdf8", tagBg:"rgba(56,189,248,0.1)", base:null, ingredients:["~2.2 lbs chicken breast","1 lemon, juiced","3 garlic cloves, minced","Salt and black pepper"], steps:["Season chicken with lemon juice, garlic, salt and pepper.","Air Fryer 400°F · 15 min · flip halfway.","Rest 5 min. Slice and store in a sealed container."], storage:"Fridge 5 days" },
         { key:"salad", icon:"🥗", title:"Wife's Salad Base", time:"10 min", desc:"5 grab-and-go portions. Hard-boil eggs for Tue & Thu.", tag:"WIFE'S LUNCHES — MON–FRI", tagColor:"#fb923c", tagBg:"rgba(251,146,60,0.1)", base:null, ingredients:["500g mixed greens","3 medium cucumbers, sliced","3 bell peppers, diced","1 red onion, thinly sliced","Eggs (hard-boil for Tue & Thu)"], steps:["Chop all vegetables.","Divide into 5 equal containers.","Hard-boil eggs for Tue & Thu.","Add tuna, salmon or avocado fresh each day."], storage:"Fridge 5 days · Add protein + avocado fresh daily" },
       ],
       saturday: [
