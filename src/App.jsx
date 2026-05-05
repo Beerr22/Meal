@@ -54,7 +54,7 @@ const DAYS = [
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · flip halfway · brush sauce last 5 min",
         H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:530, pro:38, fat:29, chol:0 },
-        W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado + 1 tbsp avocado oil", cal:660, pro:38, fat:43, chol:0 },
+        W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
       },
     },
     totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1989, pro:152, fat:102, chol:135 } },
@@ -76,7 +76,7 @@ const DAYS = [
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
         H:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:549, pro:40, fat:35, chol:107 },
-        W:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado + 1 tbsp avocado oil", cal:649, pro:40, fat:47, chol:107 },
+        W:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:649, pro:40, fat:47, chol:107 },
       },
     },
     totals:{ H:{ cal:2401, pro:220, fat:90, chol:217 }, W:{ cal:1838, pro:128, fat:115, chol:242 } },
@@ -98,7 +98,7 @@ const DAYS = [
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · paprika-lemon rub",
         H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:530, pro:38, fat:29, chol:0 },
-        W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado + 1 tbsp avocado oil", cal:660, pro:38, fat:43, chol:0 },
+        W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
       },
     },
     totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1999, pro:139, fat:105, chol:145 } },
@@ -120,7 +120,7 @@ const DAYS = [
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · generous Cajun rub",
         H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:530, pro:38, fat:29, chol:0 },
-        W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado + 1 tbsp avocado oil", cal:660, pro:38, fat:43, chol:0 },
+        W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
       },
     },
     totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1989, pro:144, fat:100, chol:295 } },
@@ -156,7 +156,7 @@ const DAYS = [
         name:"Shared Egg White Omelette · Mushrooms · Spinach · Avocado",
         prep:"Stovetop · 15 min · make one large omelette together and split it",
         base:"150g mushrooms · 100g baby spinach · 100g cherry tomatoes · avocado oil spray · sea salt · black pepper",
-        H:{ cookNote:"⏱ Stovetop · split from shared omelette  ·  Post-breakfast: 3 scoops GoL + 8 fl oz almond milk", detail:"1½ cups liquid egg whites + ½ avocado", cal:690, pro:86, fat:20, chol:0 },
+        H:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1½ cups liquid egg whites + ½ avocado\n3 scoops GoL + 8 fl oz almond milk", cal:690, pro:86, fat:20, chol:0 },
         W:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1 cup liquid egg whites + ½ avocado", cal:240, pro:18, fat:16, chol:0 },
       },
       lunch:{
@@ -170,7 +170,7 @@ const DAYS = [
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED · Mediterranean base prepared Saturday morning",
         H:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:549, pro:35, fat:33, chol:107 },
-        W:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado + 1 tbsp avocado oil", cal:649, pro:35, fat:45, chol:89 },
+        W:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:649, pro:35, fat:45, chol:89 },
       },
     },
     totals:{ H:{ cal:2393, pro:222, fat:111, chol:211 }, W:{ cal:1823, pro:141, fat:104, chol:183 } },
@@ -184,7 +184,7 @@ const DAYS = [
         name:"Shared Egg White Omelette · Peppers · Zucchini · Mushrooms · Avocado",
         prep:"Stovetop · 15 min · make one large omelette together and split it",
         base:"100g zucchini · 80g mixed peppers · 80g onion · 80g mushrooms · avocado oil spray · everything bagel seasoning",
-        H:{ cookNote:"⏱ Stovetop · split from shared omelette  ·  Post-breakfast: 3 scoops GoL + 8 fl oz almond milk", detail:"1½ cups liquid egg whites + ½ avocado", cal:690, pro:86, fat:20, chol:0 },
+        H:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1½ cups liquid egg whites + ½ avocado\n3 scoops GoL + 8 fl oz almond milk", cal:690, pro:86, fat:20, chol:0 },
         W:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1 cup liquid egg whites + ½ avocado", cal:240, pro:18, fat:16, chol:0 },
       },
       lunch:{
@@ -198,7 +198,7 @@ const DAYS = [
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · brush miso glaze last 5 min",
         H:{ detail:"14oz firm tofu (full pack) + 150g Mediterranean veg base + ½ avocado", cal:508, pro:32, fat:29, chol:0 },
-        W:{ detail:"14oz firm tofu (full pack) + 150g Mediterranean veg base + ½ avocado + 1 tbsp avocado oil", cal:660, pro:38, fat:43, chol:0 },
+        W:{ detail:"14oz firm tofu (full pack) + 150g Mediterranean veg base + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
       },
     },
     totals:{ H:{ cal:2376, pro:221, fat:110, chol:104 }, W:{ cal:1734, pro:132, fat:89, chol:9 } },
@@ -254,7 +254,7 @@ export default function MealPlan() {
     <div style={{flex:1,minWidth:0,background:profile.bg,border:`1px solid ${profile.border}`,borderRadius:10,padding:12,display:"flex",flexDirection:"column"}}>
       <div style={{fontSize:10,fontWeight:900,color:profile.color,letterSpacing:.8,textTransform:"uppercase",marginBottom:4}}>{profile.emoji} {profile.short}{extraLabel?` · ${extraLabel}`:""}</div>
       {data.cookNote&&<div style={{fontSize:10,color:"#94a3b8",marginBottom:5,fontStyle:"italic"}}>{data.cookNote}</div>}
-      <p style={{margin:"0 0 10px",fontSize:12,color:"#cbd5e1",lineHeight:1.6,flex:1}}>{data.detail}</p>
+      <p style={{margin:"0 0 10px",fontSize:12,color:"#cbd5e1",lineHeight:1.6,flex:1,whiteSpace:"pre-line"}}>{data.detail}</p>
       <MacroGrid cal={data.cal} pro={data.pro} fat={data.fat} chol={data.chol} accentColor={profile.color} isH={isH}/>
     </div>
   );
@@ -422,7 +422,6 @@ export default function MealPlan() {
     return (
       <div>
         <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10,flexWrap:"wrap"}}>
-          {isWeekend&&<Badge label="WEEKEND" color="#fbbf24" emoji="🏖️"/>}
           <Badge label={`${dinner.label} ${dt.label}`} color={dt.color} bg={dt.bg} emoji={dt.emoji}/>
         </div>
         <div style={{background:`${dt.color}08`,border:`1px solid ${dt.color}22`,borderRadius:10,padding:"8px 13px",marginBottom:11}}>
@@ -507,7 +506,7 @@ export default function MealPlan() {
               </div>
             ))}
           </div>
-          <p style={{margin:"10px 0 0",fontSize:9.5,color:"#cbd5e1",textAlign:"center"}}>Macros are estimates. Adjust portion weights to appetite and weekly progress.</p>
+          
         </div>
       </div>
     );
@@ -525,7 +524,7 @@ export default function MealPlan() {
         <div style={{display:"flex",alignItems:"flex-start",justifyContent:"space-between",marginBottom:14}}>
           <div>
             <h1 style={{margin:"0 0 3px",fontSize:21,fontWeight:900,letterSpacing:-.5}}>🥘 Couples Meal Plan</h1>
-            <p style={{margin:0,fontSize:11,color:"#cbd5e1"}}>7 days · ≤2400 kcal · ≥200g protein · &lt;220mg chol · Avocado oil</p>
+            
           </div>
           <div style={{display:"flex",flexWrap:"wrap",gap:4,justifyContent:"flex-end"}}>
             {Object.entries(DT).map(([k,v])=>(
@@ -554,7 +553,7 @@ export default function MealPlan() {
           {[HP,WP].map(p=>(
             <div key={p.name+"targets"} style={{background:p.bg,border:`1px solid ${p.border}`,borderTop:"none",borderRadius:"0 0 12px 12px",padding:"0 14px 14px"}}>
               <div style={{background:"rgba(0,0,0,.4)",borderRadius:7,padding:"5px 10px",fontSize:9,color:p.color,fontWeight:800}}>
-                {p.targets.cal} kcal · {p.targets.pro}g P · {p.targets.fat}g F · {`<${p.targets.chol}mg chol`}
+                {p.targets.cal} kcal · {p.targets.pro}g P · {`<${p.targets.chol}mg chol`}
               </div>
             </div>
           ))}
