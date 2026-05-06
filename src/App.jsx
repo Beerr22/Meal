@@ -17,16 +17,16 @@ const SHOPPING_LIST = [
     "Albacore tuna, 3 × 5oz cans","Wild salmon, 2 × 5oz cans","Kalamata olives, 1 × 100g jar",
   ]},
   { cat:"🥩 Meat & Poultry", items:[
-    "Chicken breast, ~2.2 lbs / 7 pieces · 5oz every day",
+    "Chicken breast, ~2.2 lbs","Peanut butter, 1 jar",
   ]},
   { cat:"🐟 Fish", items:[
-    "Salmon fillet, 24oz total (4 × 6oz — Tue × 2 + Sat × 2)","Cod fillet, 12oz total (7oz husband + 5oz wife · Fri)","Tilapia fillet, 6oz (Sat lunch · wife)",
+    "Salmon fillet, 6oz × 2","Salmon fillet, 3oz × 2","Cod fillet, 7oz","Cod fillet, 3oz","Tilapia fillet, 3oz",
   ]},
   { cat:"🌿 Plant Protein", items:[
-    "Tofu, 6 × 14oz packs firm",
+    "Tofu firm, 6 × 14oz",
   ]},
   { cat:"🥛 Dairy & Eggs", items:[
-    "Liquid egg whites, 2 cartons (500ml each)","Unsweetened almond milk, 80 fl oz","Cottage cheese, ~4 lbs","Pistachios, 150g","Chobani 20G Cherry Berry, 5 containers","Reduced-fat feta, small amount",
+    "Liquid egg whites, 2 cartons","Unsweetened almond milk, 80 fl oz","Cottage cheese, ~4 lbs","Pistachios, 150g","Chobani 20G Cherry Berry, 5 containers","Reduced-fat feta, small amount",
   ]},
 ];
 
@@ -36,7 +36,7 @@ const BASES = [
   { key:"mediterranean", when:"SATURDAY MORNING", label:"WEEKEND DINNER BASE — Sat & Sun nights", tagColor:"#fbbf24", tagBg:"rgba(251,191,36,0.1)", icon:"🌊", name:"Roasted Mediterranean Vegetables", prepTime:"15 min prep · 2 batches · ~30 min · 4 servings", note:"Olives, cherry tomatoes, eggplant and oregano. Zero cholesterol.", ingredients:["2 medium zucchini, half-moons","1 large eggplant, cubed 1-inch","2 red bell peppers, strips","1 large red onion, wedges","300g cherry tomatoes, halved","100g Kalamata olives, pitted","3 garlic cloves, minced","3 tbsp avocado oil","1 tsp dried oregano · 1 tsp dried thyme · ½ tsp garlic powder","Sea salt · cracked black pepper"], steps:["Toss all veg (except olives) with avocado oil and spices.","Air fry in 2 batches at 400°F · 12 min each · shake halfway.","Add olives in the last 3 min only — they burn quickly.","Cool on a tray. Store in 1 glass container.","Reheat: 380°F · 4 min or microwave 60 sec."], storage:"1 container · Fridge 3 days · Covers both Sat & Sun dinners" },
 ];
 
-const H_WD_BFAST = { name:"Garden of Life Shake · Banana · Chobani 20G", noCook:true, locked:true, detail:"3 scoops Garden of Life Organic Protein+Greens + 16 fl oz unsweetened almond milk + 1 tbsp chia seeds + 1 medium banana · Chobani 20G Cherry Berry", cal:735, pro:85, fat:17, chol:15 };
+const H_WD_BFAST = { name:"Garden of Life Shake · Banana · Chobani 20G", noCook:true, locked:true, detail:"3 scoops Garden of Life Organic Protein+Greens + 16 fl oz unsweetened almond milk + 1 tbsp peanut butter + 1 tbsp chia seeds + 1 medium banana\nChobani 20G Cherry Berry", cal:829, pro:89, fat:25, chol:15 };
 const W_WD_BFAST = { name:"Chobani 20G · Almonds · Chia Seeds", noCook:true, locked:true, detail:"Chobani 20G Cherry Berry + 20g almonds + 1 tbsp chia seeds", cal:325, pro:26, fat:16, chol:15 };
 
 const DAYS = [
@@ -51,16 +51,16 @@ const DAYS = [
         W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) albacore tuna · ½ avocado", cal:490, pro:38, fat:26, chol:55 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
-        W:{ detail:"1 scoop Animal Whey (chocolate) + 25g pistachios", cal:265, pro:26, fat:8, chol:60 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:722, pro:55, fat:39, chol:78 },
+        W:{ detail:"180g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:438, pro:47, fat:11, chol:76 },
       },
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · flip halfway · brush sauce last 5 min",
-        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:810, pro:63, fat:54, chol:0 },
-        W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
+        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:529, pro:40, fat:25, chol:0 },
+        W:{ detail:"7oz firm tofu (½ pack) + 150g cruciferous medley + ½ avocado", cal:347, pro:23, fat:18, chol:0 },
       },
     },
-    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1800, pro:128, fat:83, chol:130 } },
+    totals:{ H:{ cal:2388, pro:231, fat:97, chol:203 }, W:{ cal:1600, pro:134, fat:71, chol:146 } },
   },
   {
     day:"TUE", full:"Tuesday", isWeekend:false, color:"#2eefb0",
@@ -73,16 +73,16 @@ const DAYS = [
         W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) albacore tuna · ½ avocado", cal:370, pro:32, fat:16, chol:55 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
-        W:{ detail:"130g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:456, pro:42, fat:15, chol:61 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:722, pro:55, fat:39, chol:78 },
+        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:454, pro:49, fat:11, chol:78 },
       },
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
-        H:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:580, pro:43, fat:37, chol:108 },
-        W:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:580, pro:43, fat:37, chol:108 },
+        H:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:495, pro:41, fat:28, chol:108 },
+        W:{ detail:"3oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:330, pro:23, fat:19, chol:54 },
       },
     },
-    totals:{ H:{ cal:2407, pro:230, fat:90, chol:310 }, W:{ cal:1800, pro:140, fat:77, chol:238 } },
+    totals:{ H:{ cal:2354, pro:232, fat:100, chol:311 }, W:{ cal:1479, pro:130, fat:62, chol:202 } },
   },
   {
     day:"WED", full:"Wednesday", isWeekend:false, color:"#c4a8ff",
@@ -95,16 +95,16 @@ const DAYS = [
         W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 60g red pepper · 1 can (5oz) wild salmon · ½ avocado", cal:500, pro:35, fat:30, chol:65 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
-        W:{ detail:"1 scoop Animal Whey (chocolate) + 23g pistachios", cal:254, pro:26, fat:7, chol:60 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:722, pro:55, fat:39, chol:78 },
+        W:{ detail:"167g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:428, pro:45, fat:11, chol:75 },
       },
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · paprika-lemon rub",
-        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:810, pro:63, fat:54, chol:0 },
-        W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
+        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:529, pro:40, fat:25, chol:0 },
+        W:{ detail:"7oz firm tofu (½ pack) + 150g cruciferous medley + ½ avocado", cal:347, pro:23, fat:18, chol:0 },
       },
     },
-    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1799, pro:125, fat:85, chol:140 } },
+    totals:{ H:{ cal:2388, pro:231, fat:97, chol:203 }, W:{ cal:1600, pro:129, fat:75, chol:155 } },
   },
   {
     day:"THU", full:"Thursday", isWeekend:false, color:"#fb923c",
@@ -117,16 +117,16 @@ const DAYS = [
         W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) wild salmon · ½ avocado", cal:510, pro:32, fat:34, chol:75 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
-        W:{ detail:"55g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:398, pro:34, fat:12, chol:61 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:722, pro:55, fat:39, chol:78 },
+        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:454, pro:49, fat:11, chol:78 },
       },
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
-        H:{ detail:"7oz cod fillet + 150g cruciferous medley + ½ avocado", cal:495, pro:49, fat:22, chol:98 },
-        W:{ detail:"5oz cod fillet + 150g cruciferous medley + ½ avocado", cal:425, pro:37, fat:21, chol:70 },
+        H:{ detail:"7oz cod fillet + 150g cruciferous medley + ½ avocado", cal:410, pro:47, fat:12, chol:98 },
+        W:{ detail:"3oz cod fillet + 150g cruciferous medley + ½ avocado", cal:270, pro:23, fat:11, chol:42 },
       },
     },
-    totals:{ H:{ cal:2333, pro:240, fat:80, chol:302 }, W:{ cal:1799, pro:114, fat:80, chol:272 } },
+    totals:{ H:{ cal:2269, pro:238, fat:84, chol:301 }, W:{ cal:1559, pro:130, fat:72, chol:210 } },
   },
   {
     day:"FRI", full:"Friday", isWeekend:false, color:"#f472b6",
@@ -139,16 +139,16 @@ const DAYS = [
         W:{ salad:true, eggDay:true, detail:"🥚 EGG DAY — 100g mixed greens · 1 boiled egg · ½ avocado · 60g cherry tomatoes · small amount reduced-fat feta", cal:340, pro:10, fat:22, chol:200 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 45g almonds + 40g hazelnuts", cal:815, pro:58, fat:47, chol:78 },
-        W:{ detail:"150g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:474, pro:40, fat:15, chol:62 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:722, pro:55, fat:39, chol:78 },
+        W:{ detail:"180g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios + Chobani 20G Cherry Berry", cal:588, pro:67, fat:13, chol:91 },
       },
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · generous Cajun rub",
-        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:810, pro:63, fat:54, chol:0 },
-        W:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:660, pro:38, fat:43, chol:0 },
+        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:529, pro:40, fat:25, chol:0 },
+        W:{ detail:"7oz firm tofu (½ pack) + 150g cruciferous medley + ½ avocado", cal:347, pro:23, fat:18, chol:0 },
       },
     },
-    totals:{ H:{ cal:2388, pro:228, fat:85, chol:203 }, W:{ cal:1798, pro:123, fat:103, chol:222 } },
+    totals:{ H:{ cal:2388, pro:231, fat:97, chol:203 }, W:{ cal:1600, pro:126, fat:69, chol:306 } },
   },
   {
     day:"SAT", full:"Saturday", isWeekend:true, color:"#f97316",
@@ -159,24 +159,24 @@ const DAYS = [
         name:"Shared Egg White Omelette · Mushrooms · Spinach · Avocado",
         prep:"Stovetop · 15 min · make one large omelette together and split it",
         base:"150g mushrooms · 100g baby spinach · 100g cherry tomatoes · · sea salt · black pepper",
-        H:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1½ cups liquid egg whites + ½ avocado\n3 scoops GoL + 8 fl oz almond milk", cal:690, pro:86, fat:20, chol:0 },
+        H:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1½ cups liquid egg whites + ½ avocado\n3 scoops GoL + 8 fl oz almond milk + 1 tbsp peanut butter", cal:784, pro:90, fat:28, chol:0 },
         W:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1 cup liquid egg whites + ½ avocado", cal:240, pro:18, fat:16, chol:0 },
       },
       lunch:{
         H:{ cookNote:"⏱ Air Fryer 400°F · 14 min", detail:"5oz chicken breast (lemon-herb rub) + 200g air-fried mushrooms & peppers + ½ avocado", cal:347, pro:45, fat:17, chol:86 },
-        W:{ cookNote:"⏱ Air Fryer 400°F · 10 min", detail:"6oz tilapia fillet (smoked paprika & lime) + 200g air-fried mushrooms & peppers + ½ avocado", cal:450, pro:38, fat:28, chol:85 },
+        W:{ cookNote:"⏱ Air Fryer 400°F · 10 min", detail:"3oz tilapia fillet (smoked paprika & lime) + 200g air-fried mushrooms & peppers + ½ avocado", cal:275, pro:21, fat:12, chol:42 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop GoL + 20g almonds + 60g hazelnuts", cal:807, pro:56, fat:71, chol:18 },
-        W:{ detail:"170g cottage cheese + 1 scoop GoL + 8 fl oz almond milk + 30g almonds", cal:460, pro:47, fat:11, chol:8 },
+        H:{ detail:"200g cottage cheese + 1 scoop GoL + 60g hazelnuts", cal:691, pro:52, fat:57, chol:18 },
+        W:{ detail:"200g cottage cheese + 1 scoop GoL + 8 fl oz almond milk + Chobani 20G Cherry Berry + 35g almonds", cal:670, pro:68, fat:20, chol:24 },
       },
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED · Mediterranean base prepared Saturday morning",
-        H:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:590, pro:40, fat:38, chol:108 },
-        W:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:590, pro:40, fat:38, chol:108 },
+        H:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:505, pro:39, fat:28, chol:108 },
+        W:{ detail:"3oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:340, pro:21, fat:19, chol:54 },
       },
     },
-    totals:{ H:{ cal:2393, pro:222, fat:111, chol:211 }, W:{ cal:1799, pro:138, fat:103, chol:182 } },
+    totals:{ H:{ cal:2327, pro:226, fat:130, chol:212 }, W:{ cal:1525, pro:128, fat:67, chol:120 } },
   },
   {
     day:"SUN", full:"Sunday", isWeekend:true, color:"#e05555",
@@ -187,7 +187,7 @@ const DAYS = [
         name:"Shared Egg White Omelette · Peppers · Zucchini · Mushrooms · Avocado",
         prep:"Stovetop · 15 min · make one large omelette together and split it",
         base:"100g zucchini · 80g mixed peppers · 80g onion · 80g mushrooms · · everything bagel seasoning",
-        H:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1½ cups liquid egg whites + ½ avocado\n3 scoops GoL + 8 fl oz almond milk", cal:690, pro:86, fat:20, chol:0 },
+        H:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1½ cups liquid egg whites + ½ avocado\n3 scoops GoL + 8 fl oz almond milk + 1 tbsp peanut butter", cal:784, pro:90, fat:28, chol:0 },
         W:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1 cup liquid egg whites + ½ avocado", cal:240, pro:18, fat:16, chol:0 },
       },
       lunch:{
@@ -195,16 +195,16 @@ const DAYS = [
         W:{ cookNote:"⏱ Stovetop · 8 min", detail:"1 cup liquid egg whites (frittata style) + 200g air-fried mushrooms & peppers + ½ avocado", cal:350, pro:26, fat:16, chol:0 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop GoL + 30g almonds + 60g hazelnuts", cal:865, pro:58, fat:73, chol:18 },
-        W:{ detail:"200g cottage cheese + 1 scoop GoL + 8 fl oz almond milk + 30g almonds", cal:484, pro:50, fat:12, chol:9 },
+        H:{ detail:"200g cottage cheese + 1 scoop GoL + 60g hazelnuts", cal:691, pro:52, fat:57, chol:18 },
+        W:{ detail:"79g cottage cheese + 1 scoop GoL + 8 fl oz almond milk + Chobani 20G Cherry Berry + 50g almonds", cal:653, pro:58, fat:20, chol:22 },
       },
       dinner:{
         prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · brush miso glaze last 5 min",
-        H:{ detail:"14oz firm tofu (full pack) + 150g Mediterranean veg base + ½ avocado", cal:820, pro:60, fat:55, chol:0 },
-        W:{ detail:"7oz firm tofu (½ pack) + 150g Mediterranean veg base + ½ avocado", cal:540, pro:32, fat:38, chol:0 },
+        H:{ detail:"14oz firm tofu (full pack) + 150g Mediterranean veg base + ½ avocado", cal:539, pro:38, fat:25, chol:0 },
+        W:{ detail:"7oz firm tofu (½ pack) + 150g Mediterranean veg base + ½ avocado", cal:357, pro:21, fat:18, chol:0 },
       },
     },
-    totals:{ H:{ cal:2376, pro:221, fat:110, chol:104 }, W:{ cal:1734, pro:132, fat:89, chol:9 } },
+    totals:{ H:{ cal:2327, pro:225, fat:121, chol:104 }, W:{ cal:1600, pro:123, fat:70, chol:22 } },
   },
 ];
 
@@ -257,7 +257,13 @@ export default function MealPlan() {
     <div style={{flex:1,minWidth:0,background:profile.bg,border:`1px solid ${profile.border}`,borderRadius:10,padding:12,display:"flex",flexDirection:"column"}}>
       <div style={{fontSize:10,fontWeight:900,color:profile.color,letterSpacing:.8,textTransform:"uppercase",marginBottom:4}}>{profile.emoji} {profile.short}{extraLabel?` · ${extraLabel}`:""}</div>
       {data.cookNote&&<div style={{fontSize:10,color:"#94a3b8",marginBottom:5,fontStyle:"italic"}}>{data.cookNote}</div>}
-      <p style={{margin:"0 0 10px",fontSize:12,color:"#cbd5e1",lineHeight:1.6,flex:1,whiteSpace:"pre-line"}}>{data.detail}</p>
+      <div style={{margin:"0 0 10px",fontSize:12,color:"#cbd5e1",lineHeight:1.6,flex:1}}>
+        {data.detail.split('\n').map((line,i)=>
+          data.detail.includes('\n')
+            ? <div key={i} style={{display:"flex",gap:6,alignItems:"flex-start"}}><span style={{color:"#94a3b8",marginTop:2}}>•</span><span>{line}</span></div>
+            : <span key={i}>{line}</span>
+        )}
+      </div>
       <MacroGrid cal={data.cal} pro={data.pro} fat={data.fat} chol={data.chol} accentColor={profile.color} isH={isH}/>
     </div>
   );
