@@ -1,3 +1,4 @@
+// v78 — 2026-05-06 — PB in shake · wife 1600 kcal · 3oz fish · bullet points · chicken times · clock removed · tofu prep icons
 import { useState } from "react";
 
 const HP = { name:"Husband", short:"HUSBAND", emoji:"💪", color:"#60caff", bg:"rgba(96,202,255,0.08)", border:"rgba(96,202,255,0.28)", stats:"6′6″ · 240 lbs · Lifts 3×/wk · Sedentary", goal:"Lose 10 lbs · Preserve muscle", health:"Chol 240 · Trig 300", targets:{ cal:2400, pro:200, fat:155, chol:220 } };
@@ -55,7 +56,7 @@ const DAYS = [
         W:{ detail:"180g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:438, pro:47, fat:11, chol:76 },
       },
       dinner:{
-        prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · flip halfway · brush sauce last 5 min",
+        prep:"🌿 Tofu — Air Fryer 400°F · 18–20 min · flip halfway · brush sauce last 5 min",
         H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:529, pro:40, fat:25, chol:0 },
         W:{ detail:"7oz firm tofu (½ pack) + 150g cruciferous medley + ½ avocado", cal:347, pro:23, fat:18, chol:0 },
       },
@@ -99,7 +100,7 @@ const DAYS = [
         W:{ detail:"167g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:428, pro:45, fat:11, chol:75 },
       },
       dinner:{
-        prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · paprika-lemon rub",
+        prep:"🌿 Tofu — Air Fryer 400°F · 18–20 min · paprika-lemon rub",
         H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:529, pro:40, fat:25, chol:0 },
         W:{ detail:"7oz firm tofu (½ pack) + 150g cruciferous medley + ½ avocado", cal:347, pro:23, fat:18, chol:0 },
       },
@@ -143,7 +144,7 @@ const DAYS = [
         W:{ detail:"180g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios + Chobani 20G Cherry Berry", cal:588, pro:67, fat:13, chol:91 },
       },
       dinner:{
-        prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · generous Cajun rub",
+        prep:"🌿 Tofu — Air Fryer 400°F · 18–20 min · generous Cajun rub",
         H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:529, pro:40, fat:25, chol:0 },
         W:{ detail:"7oz firm tofu (½ pack) + 150g cruciferous medley + ½ avocado", cal:347, pro:23, fat:18, chol:0 },
       },
@@ -163,7 +164,7 @@ const DAYS = [
         W:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1 cup liquid egg whites + ½ avocado", cal:240, pro:18, fat:16, chol:0 },
       },
       lunch:{
-        H:{ cookNote:"⏱ Air Fryer 400°F · 14 min", detail:"5oz chicken breast (lemon-herb rub) + 200g air-fried mushrooms & peppers + ½ avocado", cal:347, pro:45, fat:17, chol:86 },
+        H:{ cookNote:"⏱ Air Fryer 400°F · 14 min breast · 18 min thighs", detail:"5oz chicken breast (lemon-herb rub) + 200g air-fried mushrooms & peppers + ½ avocado", cal:347, pro:45, fat:17, chol:86 },
         W:{ cookNote:"⏱ Air Fryer 400°F · 10 min", detail:"3oz tilapia fillet (smoked paprika & lime) + 200g air-fried mushrooms & peppers + ½ avocado", cal:275, pro:21, fat:12, chol:42 },
       },
       snacks:{
@@ -191,7 +192,7 @@ const DAYS = [
         W:{ cookNote:"⏱ Stovetop · split from shared omelette", detail:"1 cup liquid egg whites + ½ avocado", cal:240, pro:18, fat:16, chol:0 },
       },
       lunch:{
-        H:{ cookNote:"⏱ Air Fryer 400°F · 14 min", detail:"5oz chicken breast (rosemary & garlic) + 200g air-fried mushrooms & peppers + ½ avocado", cal:313, pro:45, fat:11, chol:86 },
+        H:{ cookNote:"⏱ Air Fryer 400°F · 14 min breast · 18 min thighs", detail:"5oz chicken breast (rosemary & garlic) + 200g air-fried mushrooms & peppers + ½ avocado", cal:313, pro:45, fat:11, chol:86 },
         W:{ cookNote:"⏱ Stovetop · 8 min", detail:"1 cup liquid egg whites (frittata style) + 200g air-fried mushrooms & peppers + ½ avocado", cal:350, pro:26, fat:16, chol:0 },
       },
       snacks:{
@@ -199,7 +200,7 @@ const DAYS = [
         W:{ detail:"79g cottage cheese + 1 scoop GoL + 8 fl oz almond milk + Chobani 20G Cherry Berry + 50g almonds", cal:653, pro:58, fat:20, chol:22 },
       },
       dinner:{
-        prep:"Press tofu 15 min · Air Fryer 400°F · 18–20 min · brush miso glaze last 5 min",
+        prep:"🌿 Tofu — Air Fryer 400°F · 18–20 min · brush miso glaze last 5 min",
         H:{ detail:"14oz firm tofu (full pack) + 150g Mediterranean veg base + ½ avocado", cal:539, pro:38, fat:25, chol:0 },
         W:{ detail:"7oz firm tofu (½ pack) + 150g Mediterranean veg base + ½ avocado", cal:357, pro:21, fat:18, chol:0 },
       },
@@ -283,7 +284,7 @@ export default function MealPlan() {
           <div style={{display:"flex",gap:4,flexWrap:"wrap",justifyContent:"flex-end"}}>{badge}</div>
         </div>
         <div style={{fontSize:15,fontWeight:800,color:"#f1f5f9",marginBottom:prep?4:0}}>{title}</div>
-        {prep&&<div style={{fontSize:9,color:"#cbd5e1",background:"rgba(255,255,255,0.04)",padding:"3px 8px",borderRadius:20,border:"1px solid rgba(255,255,255,0.06)",display:"inline-block",marginTop:2}}>⏱ {prep}</div>}
+        {prep&&<div style={{fontSize:9,color:"#cbd5e1",background:"rgba(255,255,255,0.04)",padding:"3px 8px",borderRadius:20,border:"1px solid rgba(255,255,255,0.06)",display:"inline-block",marginTop:2}}>{prep}</div>}
       </div>
       {base&&<div style={{background:"rgba(255,255,255,0.025)",border:"1px solid rgba(255,255,255,0.05)",borderRadius:7,padding:"7px 11px",marginBottom:10}}><span style={{fontSize:9,fontWeight:800,color:"#cbd5e1",textTransform:"uppercase",letterSpacing:.5}}>🤝 Shared base: </span><span style={{fontSize:11,color:"#cbd5e1"}}>{base}</span></div>}
       <PersonRow hData={hData} wData={wData}/>
@@ -326,7 +327,7 @@ export default function MealPlan() {
       sunday: [
         { key:"ratatouille", icon:"🫕", title:"Slow Cooker: Ratatouille", time:"15 min", desc:"Start first thing — 7–8 hrs LOW. Husband's weekday lunches Mon–Fri.", tag:"LUNCH BASE — HUSBAND MON–FRI", tagColor:"#f87171", tagBg:"rgba(248,113,113,0.1)", base:BASES.find(b=>b.key==="ratatouille") },
         { key:"cruciferous", icon:"✈️", title:"Prep Cruciferous Vegetables", time:"20 min", desc:"Wash, cut into florets, store raw in fridge. Air-fry 150g fresh before each Mon–Fri dinner.", tag:"DINNER BASE — BOTH · MON–FRI", tagColor:"#4ade80", tagBg:"rgba(74,222,128,0.1)", base:BASES.find(b=>b.key==="cruciferous") },
-        { key:"chicken", icon:"🍗", title:"Batch Chicken Breast (~2.2 lbs)", time:"20 min", desc:"Lemon, garlic, salt · Air Fryer 400°F · 15 min · slice & refrigerate. 5oz every day, all 7 lunches.", tag:"BATCH PROTEIN — HUSBAND", tagColor:"#38bdf8", tagBg:"rgba(56,189,248,0.1)", base:null, ingredients:["~2.2 lbs chicken breast","1 lemon, juiced","3 garlic cloves, minced","Salt and black pepper"], steps:["Season chicken with lemon juice, garlic, salt and pepper.","Air Fryer 400°F · 15 min · flip halfway.","Rest 5 min. Slice and store in a sealed container."], storage:"Fridge 5 days" },
+        { key:"chicken", icon:"🍗", title:"Batch Chicken Breast (~2.2 lbs)", time:"20 min", desc:"Lemon, garlic, salt · Air Fryer 400°F · 15 min breast · 18 min thighs · slice & refrigerate. 5oz every day, all 7 lunches.", tag:"BATCH PROTEIN — HUSBAND", tagColor:"#38bdf8", tagBg:"rgba(56,189,248,0.1)", base:null, ingredients:["~2.2 lbs chicken breast","1 lemon, juiced","3 garlic cloves, minced","Salt and black pepper"], steps:["Season chicken with lemon juice, garlic, salt and pepper.","Air Fryer 400°F · 15 min breast · 18 min thighs · flip halfway.","Rest 5 min. Slice and store in a sealed container."], storage:"Fridge 5 days" },
         { key:"salad", icon:"🥗", title:"Wife's Salad Base", time:"10 min", desc:"5 grab-and-go portions. Hard-boil eggs for Tue & Thu.", tag:"WIFE'S LUNCHES — MON–FRI", tagColor:"#fb923c", tagBg:"rgba(251,146,60,0.1)", base:null, ingredients:["500g mixed greens","3 medium cucumbers, sliced","3 bell peppers, diced","1 red onion, thinly sliced","Eggs (hard-boil for Tue & Thu)"], steps:["Chop all vegetables.","Divide into 5 equal containers.","Hard-boil eggs for Tue & Thu.","Add tuna, salmon or avocado fresh each day."], storage:"Fridge 5 days · Add protein + avocado fresh daily" },
       ],
       saturday: [
@@ -469,7 +470,10 @@ export default function MealPlan() {
           <div style={{fontSize:9,fontWeight:900,color:"#cbd5e1",textTransform:"uppercase",letterSpacing:1,marginBottom:8}}>🥗 Lunch</div>
           {!isWeekend&&meals.lunch.H.base&&(
             <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"rgba(248,113,113,.09)",border:"1px solid rgba(248,113,113,.25)",padding:"3px 10px",borderRadius:20,fontSize:9,fontWeight:800,color:"#fca5a5",marginBottom:9}}>
-              🫕 Ratatouille base — microwave 90 sec
+              <div style={{display:"flex",flexDirection:"column",gap:2}}>
+                <span>🫕 Ratatouille base — microwave 90 sec</span>
+                <span>🍗 Chicken — 14 min breast · 18 min thighs @ 400°F</span>
+              </div>
             </div>
           )}
           <div style={{display:"flex",gap:10,alignItems:"stretch"}}>
