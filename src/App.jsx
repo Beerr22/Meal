@@ -12,13 +12,10 @@ const DT = {
 const SHOPPING_LIST = [
   { cat:"🍎 Fruit", items:["Bananas, 5 medium (husband Mon–Fri morning shake)"]},
   { cat:"🥬 Fresh Vegetables", items:[
-"Bell peppers, 5","Onion, 2 large","Cherry tomatoes, 200g","Cucumber, 2 medium","Garlic, 1 head",
+    "Bell peppers, 5","Onion, 2 large","Cherry tomatoes, 200g","Cucumber, 2 medium","Garlic, 1 head",
   ]},
   { cat:"🥫 Canned", items:[
-{ cat:"🥫 Canned", items:[
-"Crushed tomatoes, 2 × 28oz cans","Red lentils, 2 cups dry","Vegetable broth, 1 liter","Kalamata olives, 1 × 100g jar","Eggs, 1 dozen",
-  { cat:"🥩 Meat & Poultry", items:[
-    "Chicken breast, ~2.2 lbs","Peanut butter, 1 jar",
+    "Crushed tomatoes, 2 × 28oz cans","Red lentils, 2 cups dry","Vegetable broth, 1 liter","Kalamata olives, 1 × 100g jar","Eggs, 1 dozen",
   ]},
   { cat:"🐟 Fish", items:[
     "Salmon fillet, 6oz × 2","Salmon fillet, 3oz × 2","Cod fillet, 7oz","Cod fillet, 3oz","Tilapia fillet, 3oz",
