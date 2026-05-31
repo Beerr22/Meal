@@ -1,4 +1,4 @@
-// v78 — 2026-05-06 — PB in shake · wife 1600 kcal · 3oz fish · bullet points · chicken times · clock removed · tofu prep icons
+// v81 — 2026-05-10 — Lentil & tomato stew (dinner base) · H lunch: cucumber/tomato/olives+chicken · W lunch: egg+greens+cherry tomato · SUN old plan
 import { useState } from "react";
 
 const HP = { name:"Husband", short:"HUSBAND", emoji:"💪", color:"#60caff", bg:"rgba(96,202,255,0.08)", border:"rgba(96,202,255,0.28)", stats:"6′6″ · 240 lbs · Lifts 3×/wk · Sedentary", goal:"Lose 10 lbs · Preserve muscle", health:"Chol 240 · Trig 300", targets:{ cal:2400, pro:200, fat:155, chol:220 } };
@@ -12,11 +12,11 @@ const DT = {
 const SHOPPING_LIST = [
   { cat:"🍎 Fruit", items:["Bananas, 5 medium (husband Mon–Fri morning shake)"]},
   { cat:"🥬 Fresh Vegetables", items:[
-    "Cauliflower, 2 large heads","Broccoli, 2 large heads","Brussels sprouts, 18oz","Asparagus, 2 bunches","Zucchini, 2 medium (for Med base)","Cucumber, 3 medium","Bell peppers, 4 red total","Avocados, 10–12","Cherry tomatoes, 3 bags (~70g × 3)","Red onion, 1","Garlic, 3 cloves","Mixed greens, 500g","Spinach, 100g baby","Mushrooms, 150g","Fresh parsley, 1 bunch","Fresh dill, 1 bunch","Fresh thyme, small bunch","Fresh ginger, small knob","Fresh basil, small bunch","Fresh chives, small bunch",
+"Bell peppers, 5","Onion, 2 large","Cherry tomatoes, 200g","Cucumber, 2 medium","Garlic, 1 head",
   ]},
   { cat:"🥫 Canned", items:[
-    "Albacore tuna, 3 × 5oz cans","Wild salmon, 2 × 5oz cans","Kalamata olives, 1 × 100g jar",
-  ]},
+{ cat:"🥫 Canned", items:[
+"Crushed tomatoes, 2 × 28oz cans","Red lentils, 2 cups dry","Vegetable broth, 1 liter","Kalamata olives, 1 × 100g jar","Eggs, 1 dozen",
   { cat:"🥩 Meat & Poultry", items:[
     "Chicken breast, ~2.2 lbs","Peanut butter, 1 jar",
   ]},
@@ -32,8 +32,8 @@ const SHOPPING_LIST = [
 ];
 
 const BASES = [
-  { key:"ratatouille", when:"SUNDAY", label:"LUNCH BASE — Husband Mon–Fri", tagColor:"#f87171", tagBg:"rgba(248,113,113,0.1)", icon:"🫕", name:"Provençal Ratatouille", prepTime:"15 min prep · 7–8 hrs LOW · 5 servings", note:"100% plant-based. Zero cholesterol.", ingredients:["2 large eggplants, cubed 1-inch","4 medium zucchini, half-moons","3 bell peppers, diced","2 × 14oz cans crushed tomatoes (no-salt)","2 large onions, diced","6 garlic cloves, minced","4 tbsp avocado oil","2 tsp herbes de Provence · 1 tsp smoked paprika · 1 tsp thyme","Fresh basil · sea salt · black pepper"], steps:["Layer eggplant and zucchini in slow cooker with half the avocado oil.","Add peppers, onions, garlic, tomatoes and remaining avocado oil. Stir.","Season with all spices.","Cook LOW 7–8 hrs. Stir once halfway if home.","Cool fully. Store in 1 glass container.","Microwave 90 sec per serving then top with chicken."], storage:"1 glass container · Fridge 5 days" },
-  { key:"cruciferous", when:"SUNDAY", label:"DINNER BASE — Both · Mon–Fri nights", tagColor:"#4ade80", tagBg:"rgba(74,222,128,0.1)", icon:"✈️", name:"Roasted Cruciferous Medley", prepTime:"Prep Sun · Air fry fresh before each meal · 10 servings", note:"Zero cholesterol. Wash and cut Sunday. Air fry 400°F · 12–14 min fresh before each dinner.", ingredients:["2 large heads cauliflower, florets","2 large heads broccoli, florets","18oz Brussels sprouts, trimmed & halved","2 bunches asparagus, woody ends snapped","5 tbsp avocado oil","2 tsp garlic powder · 1 tsp smoked paprika · 1 tsp onion powder","½ tsp chili flakes · sea salt · black pepper"], steps:["SUNDAY: Wash and cut all vegetables. Store raw in large containers in fridge.","EACH DINNER NIGHT: Toss 150g with 1 tbsp avocado oil and spices.","Air fry at 400°F · 12–14 min · shake halfway.","Plate immediately with protein."], storage:"Fridge 5 days · Air fry fresh before each meal" },
+  { key:"ratatouille", when:"SUNDAY", label:"DINNER BASE — Both Mon–Sat", tagColor:"#f87171", tagBg:"rgba(248,113,113,0.1)", icon:"🫕", name:"Slow Cooker Vegan Chili", prepTime:"10 min prep · 6–8 hrs LOW · 20 servings", note:"100% plant-based. Zero cholesterol. 150g per serving.", ingredients:["2 large cans (28oz) diced tomatoes","4 cans (15oz) black beans, drained & rinsed","1 can (15oz) corn, drained","5 bell peppers, diced","1 large onion, diced"], steps:["Dice peppers and onion.","Drain and rinse black beans and corn.","Add all ingredients to slow cooker.","Cook 6–8 hrs LOW or 3–4 hrs HIGH.","Season to taste. Store in fridge up to 5 days."], storage:"Glass containers · Fridge 5 days · 20 × 150g servings" },
+  { key:"cruciferous", when:"SUNDAY", label:"DINNER BASE — Both · Mon–Fri nights", tagColor:"#4ade80", tagBg:"rgba(74,222,128,0.1)", icon:"✈️", name:"Roasted Cruciferous Medley", prepTime:"Prep Sun · Air fry fresh before each meal · 10 servings", note:"Zero cholesterol. Wash and cut Sunday. Air fry 400°F · 12–14 min fresh before each dinner.", ingredients:["2 large heads cauliflower, florets","2 large heads broccoli, florets","18oz green beans, trimmed & halved","2 bunches asparagus, woody ends snapped","5 tbsp avocado oil","2 tsp garlic powder · 1 tsp smoked paprika · 1 tsp onion powder","½ tsp chili flakes · sea salt · black pepper"], steps:["SUNDAY: Wash and cut all vegetables. Store raw in large containers in fridge.","EACH DINNER NIGHT: Toss 150g with 1 tbsp avocado oil and spices.","Air fry at 400°F · 12–14 min · shake halfway.","Plate immediately with protein."], storage:"Fridge 5 days · Air fry fresh before each meal" },
   { key:"mediterranean", when:"SATURDAY MORNING", label:"WEEKEND DINNER BASE — Sat & Sun nights", tagColor:"#fbbf24", tagBg:"rgba(251,191,36,0.1)", icon:"🌊", name:"Roasted Mediterranean Vegetables", prepTime:"15 min prep · 2 batches · ~30 min · 4 servings", note:"Olives, cherry tomatoes, eggplant and oregano. Zero cholesterol.", ingredients:["2 medium zucchini, half-moons","1 large eggplant, cubed 1-inch","2 red bell peppers, strips","1 large red onion, wedges","300g cherry tomatoes, halved","100g Kalamata olives, pitted","3 garlic cloves, minced","3 tbsp avocado oil","1 tsp dried oregano · 1 tsp dried thyme · ½ tsp garlic powder","Sea salt · cracked black pepper"], steps:["Toss all veg (except olives) with avocado oil and spices.","Air fry in 2 batches at 400°F · 12 min each · shake halfway.","Add olives in the last 3 min only — they burn quickly.","Cool on a tray. Store in 1 glass container.","Reheat: 380°F · 4 min or microwave 60 sec."], storage:"1 container · Fridge 3 days · Covers both Sat & Sun dinners" },
 ];
 
@@ -48,20 +48,20 @@ const DAYS = [
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
-        H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
-        W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) albacore tuna · ½ avocado", cal:490, pro:38, fat:26, chol:55 },
+        H:{ base:true, detail:"150g cucumber · tomato · kalamata olives (plain) + 5oz chicken breast", cal:350, pro:51, fat:12, chol:120 },
+        W:{ salad:true, eggDay:false, detail:"1 whole egg · 80g mixed greens · 60g cherry tomatoes", cal:105, pro:9, fat:5, chol:186 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:722, pro:55, fat:39, chol:78 },
-        W:{ detail:"180g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:438, pro:47, fat:11, chol:76 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:699, pro:55, fat:46, chol:78 },
+        W:{ detail:"180g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:433, pro:47, fat:20, chol:76 },
       },
       dinner:{
         prep:"🌿 Tofu — Air Fryer 400°F · 18–20 min · flip halfway · brush sauce last 5 min",
-        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:529, pro:40, fat:25, chol:0 },
-        W:{ detail:"7oz firm tofu (½ pack) + 150g cruciferous medley + ½ avocado", cal:347, pro:23, fat:18, chol:0 },
+        H:{ detail:"14oz firm tofu (full pack) + 150g lentil & tomato stew + ½ avocado", cal:560, pro:40, fat:25, chol:0 },
+        W:{ detail:"7oz firm tofu (½ pack) + 150g lentil & tomato stew + ½ avocado", cal:399, pro:29, fat:20, chol:0 },
       },
     },
-    totals:{ H:{ cal:2388, pro:231, fat:97, chol:203 }, W:{ cal:1600, pro:134, fat:71, chol:146 } },
+    totals:{ H:{ cal:2438, pro:235, fat:109, chol:213 }, W:{ cal:1262, pro:111, fat:62, chol:277 } },
   },
   {
     day:"TUE", full:"Tuesday", isWeekend:false, color:"#2eefb0",
@@ -70,20 +70,20 @@ const DAYS = [
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
-        H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
-        W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) albacore tuna · ½ avocado", cal:370, pro:32, fat:16, chol:55 },
+        H:{ base:true, detail:"150g cucumber · tomato · kalamata olives (plain) + 5oz chicken breast", cal:350, pro:51, fat:12, chol:120 },
+        W:{ salad:true, eggDay:false, detail:"1 whole egg · 80g mixed greens · 60g cherry tomatoes", cal:105, pro:9, fat:5, chol:186 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:722, pro:55, fat:39, chol:78 },
-        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:454, pro:49, fat:11, chol:78 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:699, pro:55, fat:46, chol:78 },
+        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:449, pro:49, fat:20, chol:78 },
       },
       dinner:{
-        prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
-        H:{ detail:"6oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:495, pro:41, fat:28, chol:108 },
-        W:{ detail:"3oz salmon fillet + 150g cruciferous medley + ½ avocado", cal:330, pro:23, fat:19, chol:54 },
+        prep:"🐟 Salmon — Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
+        H:{ detail:"6oz salmon fillet + 150g lentil & tomato stew + ½ avocado", cal:586, pro:41, fat:28, chol:108 },
+        W:{ detail:"3oz salmon fillet + 150g lentil & tomato stew + ½ avocado", cal:412, pro:29, fat:23, chol:54 },
       },
     },
-    totals:{ H:{ cal:2354, pro:232, fat:100, chol:311 }, W:{ cal:1479, pro:130, fat:62, chol:202 } },
+    totals:{ H:{ cal:2464, pro:236, fat:112, chol:321 }, W:{ cal:1291, pro:113, fat:65, chol:333 } },
   },
   {
     day:"WED", full:"Wednesday", isWeekend:false, color:"#c4a8ff",
@@ -92,20 +92,20 @@ const DAYS = [
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
-        H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
-        W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 60g red pepper · 1 can (5oz) wild salmon · ½ avocado", cal:500, pro:35, fat:30, chol:65 },
+        H:{ base:true, detail:"150g cucumber · tomato · kalamata olives (plain) + 5oz chicken breast", cal:350, pro:51, fat:12, chol:120 },
+        W:{ salad:true, eggDay:false, detail:"1 whole egg · 80g mixed greens · 60g cherry tomatoes", cal:105, pro:9, fat:5, chol:186 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:722, pro:55, fat:39, chol:78 },
-        W:{ detail:"167g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:428, pro:45, fat:11, chol:75 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:699, pro:55, fat:46, chol:78 },
+        W:{ detail:"167g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:427, pro:45, fat:19, chol:75 },
       },
       dinner:{
         prep:"🌿 Tofu — Air Fryer 400°F · 18–20 min · paprika-lemon rub",
-        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:529, pro:40, fat:25, chol:0 },
-        W:{ detail:"7oz firm tofu (½ pack) + 150g cruciferous medley + ½ avocado", cal:347, pro:23, fat:18, chol:0 },
+        H:{ detail:"14oz firm tofu (full pack) + 150g lentil & tomato stew + ½ avocado", cal:560, pro:40, fat:25, chol:0 },
+        W:{ detail:"7oz firm tofu (½ pack) + 150g lentil & tomato stew + ½ avocado", cal:399, pro:29, fat:20, chol:0 },
       },
     },
-    totals:{ H:{ cal:2388, pro:231, fat:97, chol:203 }, W:{ cal:1600, pro:129, fat:75, chol:155 } },
+    totals:{ H:{ cal:2438, pro:235, fat:109, chol:213 }, W:{ cal:1256, pro:109, fat:61, chol:276 } },
   },
   {
     day:"THU", full:"Thursday", isWeekend:false, color:"#fb923c",
@@ -114,20 +114,20 @@ const DAYS = [
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
-        H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
-        W:{ salad:true, eggDay:false, detail:"100g mixed greens · 80g cucumber · 70g cherry tomatoes · 1 can (5oz) wild salmon · ½ avocado", cal:510, pro:32, fat:34, chol:75 },
+        H:{ base:true, detail:"150g cucumber · tomato · kalamata olives (plain) + 5oz chicken breast", cal:350, pro:51, fat:12, chol:120 },
+        W:{ salad:true, eggDay:false, detail:"1 whole egg · 80g mixed greens · 60g cherry tomatoes", cal:105, pro:9, fat:5, chol:186 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:722, pro:55, fat:39, chol:78 },
-        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:454, pro:49, fat:11, chol:78 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:699, pro:55, fat:46, chol:78 },
+        W:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios", cal:449, pro:49, fat:20, chol:78 },
       },
       dinner:{
-        prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
-        H:{ detail:"7oz cod fillet + 150g cruciferous medley + ½ avocado", cal:410, pro:47, fat:12, chol:98 },
-        W:{ detail:"3oz cod fillet + 150g cruciferous medley + ½ avocado", cal:270, pro:23, fat:11, chol:42 },
+        prep:"🐠 Cod — Air Fryer 400°F · 10–12 min · FULLY SHARED same basket",
+        H:{ detail:"7oz cod fillet + 150g lentil & tomato stew + ½ avocado", cal:410, pro:47, fat:12, chol:98 },
+        W:{ detail:"3oz cod fillet + 150g lentil & tomato stew + ½ avocado", cal:270, pro:23, fat:11, chol:42 },
       },
     },
-    totals:{ H:{ cal:2269, pro:238, fat:84, chol:301 }, W:{ cal:1559, pro:130, fat:72, chol:210 } },
+    totals:{ H:{ cal:2288, pro:242, fat:96, chol:311 }, W:{ cal:1149, pro:107, fat:53, chol:321 } },
   },
   {
     day:"FRI", full:"Friday", isWeekend:false, color:"#f472b6",
@@ -136,20 +136,20 @@ const DAYS = [
     meals:{
       breakfast:{ H:H_WD_BFAST, W:W_WD_BFAST },
       lunch:{
-        H:{ base:true, detail:"150g ratatouille base + 5oz chicken breast", cal:308, pro:47, fat:8, chol:110 },
-        W:{ salad:true, eggDay:true, detail:"🥚 EGG DAY — 100g mixed greens · 1 boiled egg · ½ avocado · 60g cherry tomatoes · small amount reduced-fat feta", cal:340, pro:10, fat:22, chol:200 },
+        H:{ base:true, detail:"150g cucumber · tomato · kalamata olives (plain) + 5oz chicken breast", cal:350, pro:51, fat:12, chol:120 },
+        W:{ salad:true, eggDay:true, detail:"1 whole egg · 80g mixed greens · 60g cherry tomatoes", cal:105, pro:9, fat:5, chol:186 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:722, pro:55, fat:39, chol:78 },
-        W:{ detail:"180g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios + Chobani 20G Cherry Berry", cal:588, pro:67, fat:13, chol:91 },
+        H:{ detail:"200g cottage cheese + 1 scoop Animal Whey (chocolate) + 29g almonds + 40g hazelnuts", cal:699, pro:55, fat:46, chol:78 },
+        W:{ detail:"180g cottage cheese + 1 scoop Animal Whey (chocolate) + 30g pistachios + Chobani 20G Cherry Berry", cal:583, pro:67, fat:22, chol:91 },
       },
       dinner:{
         prep:"🌿 Tofu — Air Fryer 400°F · 18–20 min · generous Cajun rub",
-        H:{ detail:"14oz firm tofu (full pack) + 150g cruciferous medley + ½ avocado", cal:529, pro:40, fat:25, chol:0 },
-        W:{ detail:"7oz firm tofu (½ pack) + 150g cruciferous medley + ½ avocado", cal:347, pro:23, fat:18, chol:0 },
+        H:{ detail:"14oz firm tofu (full pack) + 150g lentil & tomato stew + ½ avocado", cal:560, pro:40, fat:25, chol:0 },
+        W:{ detail:"7oz firm tofu (½ pack) + 150g lentil & tomato stew + ½ avocado", cal:399, pro:29, fat:20, chol:0 },
       },
     },
-    totals:{ H:{ cal:2388, pro:231, fat:97, chol:203 }, W:{ cal:1600, pro:126, fat:69, chol:306 } },
+    totals:{ H:{ cal:2438, pro:235, fat:109, chol:213 }, W:{ cal:1412, pro:131, fat:64, chol:292 } },
   },
   {
     day:"SAT", full:"Saturday", isWeekend:true, color:"#f97316",
@@ -165,19 +165,19 @@ const DAYS = [
       },
       lunch:{
         H:{ cookNote:"⏱ Air Fryer 400°F · 14 min breast · 18 min thighs", detail:"5oz chicken breast (lemon-herb rub) + 200g air-fried mushrooms & peppers + ½ avocado", cal:347, pro:45, fat:17, chol:86 },
-        W:{ cookNote:"⏱ Air Fryer 400°F · 10 min", detail:"3oz tilapia fillet (smoked paprika & lime) + 200g air-fried mushrooms & peppers + ½ avocado", cal:275, pro:21, fat:12, chol:42 },
+        W:{ cookNote:"⏱ Air Fryer 400°F · 10 min", detail:"3oz tilapia fillet (smoked paprika & lime) + 200g air-fried mushrooms & peppers + ½ avocado", cal:278, pro:24, fat:13, chol:48 },
       },
       snacks:{
-        H:{ detail:"200g cottage cheese + 1 scoop GoL + 60g hazelnuts", cal:691, pro:52, fat:57, chol:18 },
-        W:{ detail:"200g cottage cheese + 1 scoop GoL + 8 fl oz almond milk + Chobani 20G Cherry Berry + 35g almonds", cal:670, pro:68, fat:20, chol:24 },
+        H:{ detail:"Chobani 20G Cherry Berry × 2", cal:300, pro:40, fat:5, chol:30 },
+        W:{ detail:"Chobani 20G Cherry Berry", cal:150, pro:20, fat:3, chol:15 },
       },
       dinner:{
         prep:"Air Fryer 400°F · 10–12 min · FULLY SHARED · Mediterranean base prepared Saturday morning",
-        H:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:505, pro:39, fat:28, chol:108 },
-        W:{ detail:"3oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:340, pro:21, fat:19, chol:54 },
+        H:{ detail:"6oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:523, pro:39, fat:34, chol:108 },
+        W:{ detail:"3oz salmon fillet + 150g Mediterranean veg base + ½ avocado", cal:348, pro:21, fat:22, chol:54 },
       },
     },
-    totals:{ H:{ cal:2327, pro:226, fat:130, chol:212 }, W:{ cal:1525, pro:128, fat:67, chol:120 } },
+    totals:{ H:{ cal:1954, pro:214, fat:84, chol:224 }, W:{ cal:1016, pro:83, fat:54, chol:117 } },
   },
   {
     day:"SUN", full:"Sunday", isWeekend:true, color:"#e05555",
@@ -325,7 +325,8 @@ export default function MealPlan() {
   const PrepTab = () => {
     const PREP_ITEMS = {
       sunday: [
-        { key:"ratatouille", icon:"🫕", title:"Slow Cooker: Ratatouille", time:"15 min", desc:"Start first thing — 7–8 hrs LOW. Husband's weekday lunches Mon–Fri.", tag:"LUNCH BASE — HUSBAND MON–FRI", tagColor:"#f87171", tagBg:"rgba(248,113,113,0.1)", base:BASES.find(b=>b.key==="ratatouille") },
+        { key:"chili_old", icon:"🌶️", title:"Slow Cooker: Vegan Chili (prev)", time:"10 min", desc:"Start first thing — 6–8 hrs LOW. Both Mon–Sat dinner base. Makes 20 × 150g servings.", tag:"DINNER BASE — BOTH MON–SAT", tagColor:"#ef4444", tagBg:"rgba(239,68,68,0.1)", base:null, ingredients:["2 × 28oz cans diced tomatoes","4 × 15oz cans black beans, drained","1 × 15oz can corn, drained","5 bell peppers, diced","1 large onion, diced"], steps:["Dice peppers and onion.","Drain and rinse beans and corn.","Add everything to slow cooker.","Cook 6–8 hrs LOW or 3–4 hrs HIGH.","Season. Stores 5 days in fridge."], storage:"Glass containers · Fridge 5 days" },
+        { key:"lentil", icon:"🫘", title:"Slow Cooker: Lentil & Tomato Stew", time:"10 min", desc:"Start first thing — 6–8 hrs LOW. Both husband and wife weekday dinner base Mon–Sat.", tag:"DINNER BASE — BOTH MON–SAT", tagColor:"#f97316", tagBg:"rgba(249,115,22,0.1)", base:null, ingredients:["2 cups red lentils, rinsed","2 × 28oz cans crushed tomatoes","1 large onion, diced","4 garlic cloves, minced","1 liter vegetable broth","2 tsp cumin · 1 tsp turmeric · 1 tsp smoked paprika · salt & pepper"], steps:["Rinse lentils thoroughly.","Add all ingredients to slow cooker.","Cook 6–8 hrs LOW or 3–4 hrs HIGH.","Stir — lentils break down and thicken naturally.","Season to taste. Store up to 5 days in fridge."], storage:"Glass containers · Fridge 5 days · ~20 × 150g servings" },
         { key:"cruciferous", icon:"✈️", title:"Prep Cruciferous Vegetables", time:"20 min", desc:"Wash, cut into florets, store raw in fridge. Air-fry 150g fresh before each Mon–Fri dinner.", tag:"DINNER BASE — BOTH · MON–FRI", tagColor:"#4ade80", tagBg:"rgba(74,222,128,0.1)", base:BASES.find(b=>b.key==="cruciferous") },
         { key:"chicken", icon:"🍗", title:"Batch Chicken Breast (~2.2 lbs)", time:"20 min", desc:"Lemon, garlic, salt · Air Fryer 400°F · 15 min breast · 18 min thighs · slice & refrigerate. 5oz every day, all 7 lunches.", tag:"BATCH PROTEIN — HUSBAND", tagColor:"#38bdf8", tagBg:"rgba(56,189,248,0.1)", base:null, ingredients:["~2.2 lbs chicken breast","1 lemon, juiced","3 garlic cloves, minced","Salt and black pepper"], steps:["Season chicken with lemon juice, garlic, salt and pepper.","Air Fryer 400°F · 15 min breast · 18 min thighs · flip halfway.","Rest 5 min. Slice and store in a sealed container."], storage:"Fridge 5 days" },
         { key:"salad", icon:"🥗", title:"Wife's Salad Base", time:"10 min", desc:"5 grab-and-go portions. Hard-boil eggs for Tue & Thu.", tag:"WIFE'S LUNCHES — MON–FRI", tagColor:"#fb923c", tagBg:"rgba(251,146,60,0.1)", base:null, ingredients:["500g mixed greens","3 medium cucumbers, sliced","3 bell peppers, diced","1 red onion, thinly sliced","Eggs (hard-boil for Tue & Thu)"], steps:["Chop all vegetables.","Divide into 5 equal containers.","Hard-boil eggs for Tue & Thu.","Add tuna, salmon or avocado fresh each day."], storage:"Fridge 5 days · Add protein + avocado fresh daily" },
@@ -471,7 +472,7 @@ export default function MealPlan() {
           {!isWeekend&&meals.lunch.H.base&&(
             <div style={{display:"inline-flex",alignItems:"center",gap:4,background:"rgba(248,113,113,.09)",border:"1px solid rgba(248,113,113,.25)",padding:"3px 10px",borderRadius:20,fontSize:9,fontWeight:800,color:"#fca5a5",marginBottom:9}}>
               <div style={{display:"flex",flexDirection:"column",gap:2}}>
-                <span>🫕 Ratatouille base — microwave 90 sec</span>
+                <span>🐔 Chicken — 14 min breast · 18 min thighs @ 400°F</span>
                 <span>🍗 Chicken — 14 min breast · 18 min thighs @ 400°F</span>
               </div>
             </div>
